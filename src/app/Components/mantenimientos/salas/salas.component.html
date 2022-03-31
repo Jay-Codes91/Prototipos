@@ -1,1 +1,60 @@
-<p>salas works!</p>
+<h2 class="text-center">Control de salas</h2>
+<div class="container row">
+    <div class="col-3">
+       <h1>Añadir salas</h1><br><hr><br>
+
+       <form>
+        <div>
+            <label for="rol">Seleccione la ubicación</label>
+            <select class="form-select form-select-lg" id="rol">
+              <option value=""></option>
+            </select>
+          </div>
+          <div class="mt-2">
+            <label for="titulo">Nombre de la sala</label>
+            <input type="text" class="form-control form-control-lg" id="nom">
+        </div>
+        <div class="mt-2">
+            <label for="titulo">Capacidad máxima</label>
+            <input type="number" class="form-control form-control-lg" id="nom">
+        </div>
+        <div class="mt-2">
+            <label for="titulo">Aforo permitido</label>
+            <input type="number" class="form-control form-control-lg" id="nom">
+        </div>
+        <div class="d-grid mt-4">
+            <button class="btn btn-info" type="submit">Añadir</button>
+          </div><br>
+       </form>
+    </div>
+    <div class="col-9">
+        <div class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                  <tr>
+                    <th scope="col">Ubicación</th>
+                    <th scope="col">Sala</th>
+                    <th scope="col">Capacidad Máxima</th>
+                    <th scope="col">Aforo permitido</th>
+                    <th scope="col">Modificar</th>
+                    <th scope="col">Eliminar</th>  
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">Oficina 5-3</th>
+                    <td>Sala 2: Sala General</td>
+                    <td>20</td>
+                    <td>10</td>
+                    <td>
+                        <button class="btn btn-warning" type="button">Modificar</button>
+                    </td>
+                    <td>
+                        <button class="btn btn-danger" type="button">Eliminar</button>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+        </div>
+    </div>
+</div>
