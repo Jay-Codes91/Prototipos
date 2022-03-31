@@ -10,17 +10,29 @@ import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './Components/login/login.component';
 import { AdminComponent } from './Components/admin/admin.component';
+import { Ofi53Component } from './Components/ofisadmin/ofi53/ofi53.component';
+import { Ofi52Component } from './Components/ofisadmin/ofi52/ofi52.component';
+import { Ofi51Component } from './Components/ofisadmin/ofi51/ofi51.component';
+import { UsuariosComponent } from './Components/mantenimientos/usuarios/usuarios.component';
+import { SalasComponent } from './Components/mantenimientos/salas/salas.component';
 
 const routes: Routes = [
    {path: '', component: LoginComponent, pathMatch: 'full'},
-   {path: 'admin', component: AdminComponent}
+   {path: 'admin', component: AdminComponent},
+   {path: 'salas', component: SalasComponent},
+   {path: 'usuarios', component: UsuariosComponent}
 ]
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
-    AdminComponent
+    AdminComponent,
+    Ofi53Component,
+    Ofi52Component,
+    Ofi51Component,
+    UsuariosComponent,
+    SalasComponent
   ],
   imports: [
     BrowserModule,

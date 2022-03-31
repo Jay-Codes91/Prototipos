@@ -1,1 +1,60 @@
-<p>admin works!</p>
+<header class="d-flex justify-content-between">
+    <img src="assets/Logo-ECEN-prov2.png" class="img-fluid" alt="Logo ECEN" width="120" height="120">
+    <div class="align-self-center">
+        <h1 class="text-center">Sistema de reservas de cubículos de trabajo y de salas de reunión de la ECEN</h1>
+    </div>
+    <img src="assets/Logo-Uned-prov.jpg" class="img-fluid" alt="Logo Uned" width="120" height="120">
+</header>
+<div class="container-fluid p-2 d-flex justify-content-between bg-danger">
+    <h3 class=" align-self-center">Administrador</h3>
+    <div class="dropdown me-2" title="Administradora: Hilda">
+      <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-expanded="false">
+        <i class="fa-solid fa-circle-user" style="font-size: 40px;"></i>
+      </a>
+    
+      <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+        <li><a class="dropdown-item" href="#">Ayuda</a></li>
+        <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+        <li><hr class="dropdown-divider"></li>
+        <li><h6 class="text-center bol"><b>Hilda Briceño</b></h6></li>
+      </ul>
+    </div>
+</div>
+<br><br>
+
+<p-tabView>
+  <p-tabPanel header="Pantalla de reservas">
+      <h1 class="text-center">Control de las Reservas de cubículos y salas</h1>
+      <br>
+      <div class="container">
+        <p-tabView>
+            <p-tabPanel header="Oficina 5-3">
+               Content 1
+            </p-tabPanel>
+            <p-tabPanel header="Oficina 5-2">
+                Content 2
+            </p-tabPanel>
+            <p-tabPanel header="Oficina 5-1">
+                Content 3
+            </p-tabPanel>
+          </p-tabView>
+      </div>
+  </p-tabPanel>
+  <p-tabPanel header="Control de aforos">
+      Content 2
+  </p-tabPanel>
+  <p-tabPanel header="Mantenimiento de usuarios y oficinas">
+    <div class="container">
+      <p-tabView>
+          <p-tabPanel header="Usuarios">
+             <app-usuarios></app-usuarios>
+          </p-tabPanel>
+          <p-tabPanel header="Salas">
+              <app-salas></app-salas>
+          </p-tabPanel>
+        </p-tabView>
+    </div>
+  </p-tabPanel>
+</p-tabView>
+
+
