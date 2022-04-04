@@ -1,4 +1,4 @@
-<h3 class="text-center">Oficina 5-3</h3><br>
+<h3 class="text-center"><b>Oficina 5-3</b></h3><br>
 <!--
 <div class="container w-75 mx-auto">
     <img src="assets/Oficina 5-3.png" alt="Oficina 5-3" class="img-fluid">
@@ -32,11 +32,6 @@
           </select>
         <button class="btn btn-danger" type="submit">Inhabilitar</button>
        </div><br>
-
-       <div class="text-center">
-        <button class="btn btn-danger" type="button">Inhabilitar todos los cubículos</button>
-    </div>
-
        
 
    </div>
@@ -44,8 +39,9 @@
 <br>
 
 <div class="container">
+  <h3 class="text-center"><b>Reservas Activas</b></h3><br>
     <p-tabView>
-        <p-tabPanel header="Oficina 5-3 - Cubículos">
+        <p-tabPanel header="Cubículos">
             <div class="table-responsive">
                 <table class="table table-bordered">
                     <thead>
@@ -66,18 +62,19 @@
                         <td>Encargado de Carrera</td>
                         <td>carlos.matarrita@uned.ac.cr</td>
                         <td>2022-04-12</td>
-                        <td>10:30</td>
+                        <td>10:30 am</td>
                         <td><button class="btn btn-danger" type="button">Eliminar</button></td>
                       </tr>
                     </tbody>
                   </table>
             </div>
         </p-tabPanel>
-        <p-tabPanel header="Oficina 5-2  - Salas">
+        <p-tabPanel header="Salas (Todas las oficinas)">
             <div class="table-responsive">
                 <table class="table table-bordered">
                     <thead>
                       <tr>
+                        <th scope="col">Ubicación</th>
                         <th scope="col">Sala</th>
                         <th scope="col">Nombre y Apellidos</th>
                         <th scope="col">Rol</th>
@@ -90,7 +87,8 @@
                     </thead>
                     <tbody>
                       <tr>
-                        <th scope="row">1</th>
+                        <th scope="row">Oficina 5-3</th>
+                        <td>Sala 1: Sala de asesoría académica</td>
                         <td>Carlos Matarrita</td>
                         <td>Encargado de Carrera</td>
                         <td>carlos.matarrita@uned.ac.cr</td>

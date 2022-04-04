@@ -6,6 +6,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import {InputTextModule} from 'primeng-lts/inputtext';
 import {TabViewModule} from 'primeng-lts/tabview';
+import {CalendarModule} from 'primeng-lts/calendar';
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './Components/login/login.component';
@@ -15,12 +16,19 @@ import { Ofi52Component } from './Components/ofisadmin/ofi52/ofi52.component';
 import { Ofi51Component } from './Components/ofisadmin/ofi51/ofi51.component';
 import { UsuariosComponent } from './Components/mantenimientos/usuarios/usuarios.component';
 import { SalasComponent } from './Components/mantenimientos/salas/salas.component';
+import { ReservasComponent } from './Components/reservas/reservas.component';
+import { PluginsComponent } from './Components/plugins/plugins.component';
+import { Page404Component } from './Components/page404/page404.component';
+
 
 const routes: Routes = [
    {path: '', component: LoginComponent, pathMatch: 'full'},
    {path: 'admin', component: AdminComponent},
    {path: 'salas', component: SalasComponent},
-   {path: 'usuarios', component: UsuariosComponent}
+   {path: 'usuarios', component: UsuariosComponent},
+   {path: 'reservas', component: ReservasComponent},
+   {path: 'plugins', component: PluginsComponent},
+   {path: 'page404', component: Page404Component}
 ]
 
 @NgModule({
@@ -32,7 +40,11 @@ const routes: Routes = [
     Ofi52Component,
     Ofi51Component,
     UsuariosComponent,
-    SalasComponent
+    SalasComponent,
+    ReservasComponent,
+    PluginsComponent,
+    Page404Component,
+    
   ],
   imports: [
     BrowserModule,
@@ -40,6 +52,7 @@ const routes: Routes = [
     FormsModule,
     InputTextModule,
     TabViewModule,
+    CalendarModule,
     NgxMaterialTimepickerModule,
     RouterModule.forRoot(routes)
   ],

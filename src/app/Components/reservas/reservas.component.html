@@ -1,0 +1,122 @@
+<header class="d-flex justify-content-between">
+  <img src="assets/Logo-ECEN-prov2.png" class="img-fluid" alt="Logo ECEN" width="120" height="120">
+  <div class="align-self-center">
+    <h1 class="text-center">Sistema de reservas de cubículos de trabajo y de salas de reunión de la ECEN</h1>
+  </div>
+  <img src="assets/Logo-Uned-prov.jpg" class="img-fluid" alt="Logo Uned" width="120" height="120">
+</header>
+<div class="container-fluid p-2 d-flex justify-content-between bg-info">
+  <h3 class=" align-self-center">Usuarios - Rol</h3>
+  <div class="dropdown me-2" title="Usuario: Carlos">
+    <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+      aria-expanded="false">
+      <i class="fa-solid fa-circle-user" style="font-size: 40px;"></i>
+    </a>
+
+    <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+      <li><a class="dropdown-item" href="#">Ayuda</a></li>
+      <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
+      <li>
+        <hr class="dropdown-divider">
+      </li>
+      <li>
+        <h6 class="text-center bol"><b>Carlos Matarrita</b></h6>
+      </li>
+    </ul>
+  </div>
+</div>
+
+<p-tabView>
+  <p-tabPanel header="Reservar espacios Oficina 5-3">
+    <div class="container row">
+      <img src="assets/Oficina 5-3.png" class="col-9" alt="Oficina 5-3">
+      <div class="col-3">
+        <button class="btn btn-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+          aria-controls="offcanvasExample">
+          Disponible
+        </button><br><br>
+        <button class="btn btn-secondary" (click)="nodisp()">No disponible</button><br><br>
+        <button class="btn btn-info" (click)="resev()">Reservado</button>
+      </div>
+    </div>
+  </p-tabPanel>
+  <p-tabPanel header="Reservar salas">
+    <h2 class="text-center">Reservas de salas de reunión</h2><br>
+    <div class="container">
+      <div class="table-responsive">
+        <table class="table table-bordered">
+            <thead>
+              <tr>
+                <th scope="col">Ubicación</th>
+                <th scope="col">Sala</th>
+                <th scope="col">Capacidad Máxima</th>
+                <th scope="col">Aforo permitido</th>
+                <th scope="col">Estado</th>
+                <th scope="col">Reserva</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">Oficina 5-3</th>
+                <td>Sala 2: Sala General</td>
+                <td>20</td>
+                <td>10</td>
+                <td>Disponible</td>
+                <td>
+                    <button class="btn btn-info" type="button">Reservar</button>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">Oficina 5-1</th>
+                <td>Sala 3</td>
+                <td>8</td>
+                <td>4</td>
+                <td>No disponible</td>
+                <td>
+                    <button class="btn btn-secondary" type="button" disabled>Reservado</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+    </div>
+     
+    </div>
+  </p-tabPanel>
+</p-tabView>
+
+<div class="offcanvas offcanvas-end w-50" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header border-bottom">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Reservar espacio</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <form action="">
+      <h3>Cubículo # <b>1</b></h3>
+      <div class="mt-2">
+        <label for="titulo">Nombre del usuario</label>
+        <input type="text" class="form-control form-control-lg" id="nom">
+      </div>
+      <div class="mt-2">
+        <label for="titulo">Primer Apellido</label>
+        <input type="text" class="form-control form-control-lg" id="ape1">
+      </div>
+      <div class="mt-2">
+        <label for="rol">Rol del usuario</label>
+        <select class="form-select form-select-lg" id="rol">
+          <option value=""></option>
+        </select>
+      </div>
+      <div class="mt-2">
+        <label for="titulo">Fecha de la reserva</label>
+        <input type="text" class="form-control form-control-lg" id="fecha">
+      </div>
+      <div class="mt-2">
+        <label for="titulo">Hora de la reserva</label>
+        <input type="text" class="form-control form-control-lg" id="hora">
+      </div>
+      <div class="d-grid mt-4">
+        <button class="btn btn-info" type="submit">Ingresar</button>
+      </div>
+    </form>
+  </div>
+</div>
