@@ -79,7 +79,8 @@
     <div class="card">
         <div class="card-header clearfix">
             <h2 class="float-start">Lista de Usuarios</h2>
-            <button type="button" class=" btn btn-info float-end me-2 mt-1">Añadir Usuario</button>
+            <button type="button" class=" btn btn-info float-end me-2 mt-1" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+            aria-controls="offcanvasExample">Añadir Usuario</button>
         </div>
         <div class="card-body">
             <div class="w-50 mx-auto">
@@ -99,7 +100,6 @@
                         <th scope="col">Rol</th>
                         <th scope="col">Correo electrónico</th>
                         <th scope="col">Contraseña</th>
-                        <th scope="col">Ubicación</th>
                         <th scope="col">Modificar</th>
                         <th scope="col">Eliminar</th>
         
@@ -114,7 +114,6 @@
                         <td>Encargado de carreras</td>
                         <td>carlos.matarrita@uned.ac.cr</td>
                         <td>Pk49Yh</td>
-                        <td>Oficina 5-1</td>
                         <td>
                             <button class="btn btn-warning" type="button">Modificar</button>
                         </td>
@@ -130,7 +129,46 @@
     </div>
 </div>
 
-
+<div class="offcanvas offcanvas-end w-50" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header border-bottom">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Añadir usuarios</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <form action="">
+      <div>
+        <label for="titulo">Nombre</label>
+        <input type="text" class="form-control form-control-lg" id="nom">
+    </div>
+    <div class="mt-2">
+        <label for="titulo">Primer Apellido</label>
+        <input type="text" class="form-control form-control-lg" id="nom">
+    </div>
+    <div class="mt-2">
+        <label for="titulo">Segundo Apellido</label>
+        <input type="text" class="form-control form-control-lg" id="nom">
+    </div>
+    <div>
+      <label for="rol">Seleccione el rol</label>
+      <select class="form-select form-select-lg" id="rol">
+        <option value="" selected>Selecciona tu rol</option>
+      </select>
+    </div>
+    <div class="mt-2">
+      <label for="titulo">Correo electrónico</label>
+      <input type="email" class="form-control form-control-lg" id="correo">
+    </div>
+    
+    <div class="mt-2">
+      <label for="password">Contraseña</label>
+      <input type="password" class="form-control form-control-lg" id="pass">
+    </div>
+    <div class="d-grid mt-4">
+      <button class="btn btn-info" type="submit">Añadir</button>
+    </div><br>
+    </form>
+  </div>
+</div>
 
 
 
