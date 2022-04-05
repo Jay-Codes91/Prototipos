@@ -1,80 +1,6 @@
 <h3 class="text-center">Usuarios del sistema</h3>
 <br>
 
-<!--<div class="container-fluid row mb-2 border">
-    <div class="col-3 bg-light border-end">
-        <h3 class="text-center mt-1">Ingresar/modificar usuarios</h3>
-        <br><hr><br>
-        <form >
-
-            <div>
-                <label for="titulo">Nombre</label>
-                <input type="text" class="form-control form-control-lg" id="nom">
-            </div>
-            <div class="mt-2">
-                <label for="titulo">Primer Apellido</label>
-                <input type="text" class="form-control form-control-lg" id="nom">
-            </div>
-            <div class="mt-2">
-                <label for="titulo">Segundo Apellido</label>
-                <input type="text" class="form-control form-control-lg" id="nom">
-            </div>
-            <div>
-              <label for="rol">Seleccione el rol</label>
-              <select class="form-select form-select-lg" id="rol">
-                <option value="" selected>Selecciona tu rol</option>
-              </select>
-            </div>
-            <div class="mt-2">
-              <label for="titulo">Correo electrónico</label>
-              <input type="email" class="form-control form-control-lg" id="correo">
-            </div>
-            
-            <div class="mt-2">
-              <label for="password">Contraseña</label>
-              <input type="password" class="form-control form-control-lg" id="pass">
-            </div>
-            <div class="mt-2">
-                <label for="password">Confirmar Contraseña</label>
-                <input type="password" class="form-control form-control-lg" id="pass">
-              </div>
-            <div class="d-grid mt-4">
-              <button class="btn btn-info" type="submit">Ingresar</button>
-            </div><br>
-          </form>
-    </div>
-    <div class="col-9 bg-light">
-        <h3 class="text-center">Lista de usuarios</h3>
-        <br><hr><br>
-
-        <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th scope="col">#</th>
-                <th scope="col">Nombre</th>
-                <th scope="col">Primer Apellido</th>
-                <th scope="col">Segundo Apellido</th>
-                <th scope="col">Rol</th>
-                <th scope="col">Correo electrónico</th>
-                <th scope="col">Contraseña</th>
-
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th scope="row">1</th>
-                <td>Carlos</td>
-                <td>Matarrita</td>
-                <td>Campos</td>
-                <td>Encargado de carreras</td>
-                <td>carlos.matarrita@uned.ac.cr</td>
-                <td>Pk49Yh</td>
-              </tr>
-            </tbody>
-          </table>
-    </div>
-</div>-->
-
 <div class="container p-1">
     <div class="card">
         <div class="card-header clearfix">
@@ -86,7 +12,7 @@
             <div class="w-50 mx-auto">
                 <div class="form-floating">
                     <input type="text" class="form-control form-control-lg" id="floatingInput" placeholder="carlos">
-                    <label for="floatingInput">Buscar Usuario</label>
+                    <label for="floatingInput">Buscar usuario por nombre</label>
                   </div>
             </div><br><br>
             <div class="table-responsive">
@@ -99,9 +25,9 @@
                         <th scope="col">Segundo Apellido</th>
                         <th scope="col">Rol</th>
                         <th scope="col">Correo electrónico</th>
-                        <th scope="col">Contraseña</th>
+                        <th scope="col">Estado</th>
                         <th scope="col">Modificar</th>
-                        <th scope="col">Eliminar</th>
+                        <th scope="col">Activar/Desactivar</th>
         
                       </tr>
                     </thead>
@@ -113,12 +39,27 @@
                         <td>Campos</td>
                         <td>Encargado de carreras</td>
                         <td>carlos.matarrita@uned.ac.cr</td>
-                        <td>Pk49Yh</td>
+                        <td>Activo</td>
                         <td>
                             <button class="btn btn-warning" type="button">Modificar</button>
                         </td>
                         <td>
-                            <button class="btn btn-danger" type="button">Eliminar</button>
+                            <button class="btn btn-danger" type="button">Desactivar</button>
+                        </td>
+                      </tr>
+                      <tr>
+                        <th scope="row">2</th>
+                        <td>Maritza</td>
+                        <td>Salazar</td>
+                        <td>Castro</td>
+                        <td>Encargado de cátedra</td>
+                        <td>maritza.salazar@uned.ac.cr</td>
+                        <td>Inactivo</td>
+                        <td>
+                            <button class="btn btn-warning" type="button" disabled>Modificar</button>
+                        </td>
+                        <td>
+                            <button class="btn btn-danger" type="button">Activar</button>
                         </td>
                       </tr>
                     </tbody>
