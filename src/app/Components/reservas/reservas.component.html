@@ -52,6 +52,8 @@
                 <th scope="col">Capacidad Máxima</th>
                 <th scope="col">Aforo permitido</th>
                 <th scope="col">Estado</th>
+                <th scope="col">Hora de inicio</th>
+                <th scope="col">Hora de salida</th>
                 <th scope="col">Reserva</th>
               </tr>
             </thead>
@@ -62,6 +64,8 @@
                 <td>20</td>
                 <td>10</td>
                 <td>Disponible</td>
+                <td>10:00 am</td>
+                <td>10:30 am</td>
                 <td>
                     <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2"
                     aria-controls="offcanvasExample">Reservar</button>
@@ -73,6 +77,8 @@
                 <td>8</td>
                 <td>4</td>
                 <td>Reservado</td>
+                <td>8:00 am</td>
+                <td>9:00 am</td>
                 <td>
                     <button class="btn btn-secondary" type="button" disabled>Reservado</button>
                 </td>
@@ -93,20 +99,7 @@
   <div class="offcanvas-body">
     <form action="">
       <h3>Cubículo # <b>1</b></h3>
-      <div class="mt-2">
-        <label for="titulo">Nombre del usuario</label>
-        <input type="text" class="form-control form-control-lg" id="nom">
-      </div>
-      <div class="mt-2">
-        <label for="titulo">Primer Apellido</label>
-        <input type="text" class="form-control form-control-lg" id="ape1">
-      </div>
-      <div class="mt-2">
-        <label for="rol">Rol del usuario</label>
-        <select class="form-select form-select-lg" id="rol">
-          <option value=""></option>
-        </select>
-      </div>
+     
       <div class="mt-2">
         <label for="titulo">Correo electrónico</label>
         <input type="text" class="form-control form-control-lg" id="fecha">
@@ -116,7 +109,11 @@
         <input type="text" class="form-control form-control-lg" id="fecha">
       </div>
       <div class="mt-2">
-        <label for="titulo">Hora de la reserva</label>
+        <label for="titulo">Hora de inicio</label>
+        <input type="text" class="form-control form-control-lg" id="hora">
+      </div>
+      <div class="mt-2">
+        <label for="titulo">Hora de salida</label>
         <input type="text" class="form-control form-control-lg" id="hora">
       </div>
       <div class="d-grid mt-4">
@@ -134,20 +131,7 @@
   </div>
   <div class="offcanvas-body">
     <h3>Sala # 2: Sala general <b>1</b></h3>
-    <div class="mt-2">
-      <label for="titulo">Nombre</label>
-      <input type="text" class="form-control form-control-lg" id="nom">
-    </div>
-    <div class="mt-2">
-      <label for="titulo">Primer Apellido</label>
-      <input type="text" class="form-control form-control-lg" id="nom">
-    </div>
-    <div class="mt-2">
-      <label for="rol">Rol del usuario</label>
-      <select class="form-select form-select-lg" id="rol">
-        <option value=""></option>
-      </select>
-    </div>
+    
     <div class="mt-2">
       <label for="titulo">Correo electrónico</label>
       <input type="text" class="form-control form-control-lg" id="nom">
@@ -163,7 +147,11 @@
       <input type="text" class="form-control form-control-lg" id="nom">
     </div>
     <div class="mt-2">
-      <label for="titulo">Hora de reserva</label>
+      <label for="titulo">Hora de inicio</label>
+      <input type="text" class="form-control form-control-lg" id="nom">
+    </div>
+    <div class="mt-2">
+      <label for="titulo">Hora de salida</label>
       <input type="text" class="form-control form-control-lg" id="nom">
     </div>
     <div class="d-grid mt-4">

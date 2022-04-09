@@ -7,6 +7,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {InputTextModule} from 'primeng-lts/inputtext';
 import {TabViewModule} from 'primeng-lts/tabview';
 import {CalendarModule} from 'primeng-lts/calendar';
+import {FullCalendarModule} from 'primeng-lts/fullcalendar';
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import { AppComponent } from './app.component';
 import { LoginComponent } from './Components/login/login.component';
@@ -54,6 +55,7 @@ const routes: Routes = [
     TabViewModule,
     CalendarModule,
     NgxMaterialTimepickerModule,
+    FullCalendarModule,
     RouterModule.forRoot(routes)
   ],
   providers: [],
