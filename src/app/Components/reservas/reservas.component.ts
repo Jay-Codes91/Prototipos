@@ -23,8 +23,14 @@ export class ReservasComponent implements OnInit {
   resev(){
     Swal.fire({
       icon: 'info',
-      title: 'Cubículo Reservado'
+      title: '<strong>Cubículo Reservado</strong>',
+      html: '<h5><b>Usuario: </b>Mario Matarrita</h5>'+
+            '<h5><b>Rol: </b>Encargado de cátedra</h5>',
+      footer: '<button class="btn btn-danger" type="button">Eliminar Reserva</button>'
+      
     })
   }
+
+ 
 
 }
