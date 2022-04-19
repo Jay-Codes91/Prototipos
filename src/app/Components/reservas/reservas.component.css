@@ -86,43 +86,27 @@
   background-color: #FFA000;
 }
 
-#offcanvasExample {
+#offcanvasExample, #offcanvasExample2, #offcanvasExample3 {
   width: 30%;
 }
 
 @media screen and (max-width: 540px) {
-  #offcanvasExample {
+  #offcanvasExample, #offcanvasExample2, #offcanvasExample3 {
     width: 100%;
   }
 }
 
 @media screen and (min-width: 541px) and (max-width: 720px) {
-  #offcanvasExample {
+  #offcanvasExample, #offcanvasExample2, #offcanvasExample3 {
     width: 50%;
   }
 }
 
-#offcanvasExample2 {
-  width: 30%;
-}
-
-@media screen and (max-width: 540px) {
-  #offcanvasExample2 {
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 541px) and (max-width: 720px) {
-  #offcanvasExample2 {
-    width: 50%;
-  }
-}
-
-#startTime:-moz-read-only, #endTime:-moz-read-only {
+#startTime:-moz-read-only, #startTime2:-moz-read-only, #endTime:-moz-read-only, #endTime2:-moz-read-only {
   background-color: #ffffff;
 }
 
-#startTime:read-only, #endTime:read-only {
+#startTime:read-only, #startTime2:read-only, #endTime:read-only, #endTime2:read-only {
   background-color: #ffffff;
 }
 /*# sourceMappingURL=reservas.component.css.map */

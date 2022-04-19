@@ -3,7 +3,7 @@ import interactionPlugin from '@fullcalendar/interaction';
 import listPlugin from '@fullcalendar/list';
 import timeGridPlugin from '@fullcalendar/timegrid';
 //import esLocale from '@fullcalendar/core/locales/es';
-
+declare var Swal: any;
 @Component({
   selector: 'app-ofi53',
   templateUrl: './ofi53.component.html',
@@ -67,6 +67,31 @@ export class Ofi53Component implements OnInit {
       }
     ]
 
+  }
+
+  resev(){
+    Swal.fire({
+      icon: 'info',
+      title: '<strong>Cubículo Reservado</strong>',
+      html: '<h5><b>Usuario: </b>Mario Matarrita</h5>'+
+            '<h5><b>Rol: </b>Encargado de cátedra</h5>',
+      footer: '<button class="btn btn-danger" type="button">Eliminar Reserva</button>'
+      
+    })
+  }
+
+  nodisp(){
+    Swal.fire({
+      icon: 'error',
+      title: 'Cubículo no disponible'
+    })
+  }
+
+  disp(){
+    Swal.fire({
+      icon: 'success',
+      title: 'Cubículo disponible'
+    })
   }
 
 }

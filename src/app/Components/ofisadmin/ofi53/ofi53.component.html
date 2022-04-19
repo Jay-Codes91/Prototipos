@@ -1,9 +1,117 @@
 <h3 class="text-center"><b>Oficina 5-3</b></h3><br>
 
 <div class="container-fluid row m-0 p-0">
-  <div class="col-12 col-md-8">
-    <img src="assets/Oficina 5-3.png" alt="Oficina 5-3" class="img-fluid">
-  </div>
+  <div class="principal col-12 col-md-8">
+
+    <!-------------ParteA------------->
+    <div class="parteA row border">
+        <div class="col-8 border d-flex justify-content-center align-items-center"><b>Oficina 5-3 (Trabajo Colaborativo)</b></div>
+        <div class="col-4 border m-0 p-0 d-flex justify-content-center align-items-center">
+            Sala #2
+        </div>
+    </div>
+
+    <!-------------ParteB------------->
+    <div class="parteB row border">
+        <!-------------ParteB1------------->
+        <div class="col-2 border p-0 m-0 row align-items-center">
+            <div class="p-0 m-0">
+              <button class="btn btnNoD col-12 p-4" type="button">2</button>
+              <button class="btn btnD  col-12 mt-1 p-4" type="button">1</button>
+            </div>
+        </div>
+        <!-------------ParteB2------------->
+        <div class="col-7 border p-0 m-0" id="parteB2">
+            <!-------------ParteB2.1------------->
+            <div class="row p-0 m-0">
+                <button class="btn btnR col-3 p-4" type="button" (click)="resev()">3</button>
+                <button class="btn btnNoD col-3 p-4" type="button">4</button>
+                <button class="btn btnD col-3 p-4" type="button">5</button>
+                <button class="btn btnD col-3 p-4" type="button">6</button>
+            </div>
+            <!-------------ParteB2.2------------->
+            <div class="row p-0 m-0">
+                <button class="btn btnD col-3 p-4" type="button">12</button>
+                <div class="col-9">
+                  <div class="row row-cols-3 gy-1">
+                    <button class="btn btnNoD p-4" type="button" (click)="nodisp()">11</button>
+                    <button class="btn btnD p-4" type="button">10</button>
+                    <button class="btn btnNoD p-4" type="button">9</button>
+                    <button class="btn btnNoD p-4" type="button">13</button>
+                    <button class="btn btnNoD p-4" type="button">14</button>
+                    <button class="btn btnD p-4" type="button">15</button>
+                  </div>
+                </div>
+            </div>
+            <!-------------ParteB2.3------------->
+            
+            <div class="flex-row ms-5">
+                <button class="btn btnAD p-4 ms-3 text-light" type="button" disabled>Admin<br>16</button>
+            </div>
+            
+        </div>
+        <!-------------ParteB3------------->
+        <div class="col-3 border p-0 m-0" id="parteB3">
+            
+              <button class="btn btnD col-6 p-4" type="button" (click)="disp()" >7</button>
+              <button class="btn btnD col-6 p-4" type="button">8</button>
+            
+            
+        </div>
+    </div>
+
+    <!-------------ParteC------------>
+    <div class="parteC row border">
+        <div class="col-2 border m-0 p-0 d-flex justify-content-center align-items-center">
+            Sala <br> #1
+        </div>
+        <div class="col-7 border p-0 m-0">
+            <div class="row p-0 m-0" id="parteC2">
+                <div class="col-3 border p-0 m-0 row align-items-end">
+                    <div class="p-0 m-0">
+                      <button class="btn btnNoD col-12 mt-1 p-4" type="button">#</button>
+                    </div>
+                </div>
+                <div class="col-6 border p-0 m-0 row">
+                    <div class="p-0 m-0">
+                        <button class="btn btnNoD col-6 mt-1 p-4" type="button">#</button>
+                        <button class="btn btnNoD col-6 mt-1 p-4" type="button">#</button>
+                      </div>
+                      <div class="p-0 m-0 align-self-end">
+                        <button class="btn btnNoD col-6 mt-1 p-4" type="button">#</button>
+                        <button class="btn btnNoD col-6 mt-1 p-4" type="button">#</button>
+                      </div>
+                </div>
+                <div class="col-3 border p-0 m-0 row g-1 flex-row-reverse justify-content-between">
+                    
+                        <button class="btn btnNoD col-12 p-3 " type="button">#</button>
+                        <button class="btn btnNoD col-12 p-3 " type="button">#</button>
+                        <button class="btn btnNoD col-12 p-3 " type="button">#</button>
+                      
+                </div>
+            </div>
+        </div>
+        <!---->
+        <div class="col-3 border m-0 p-1 d-flex justify-content-center align-items-center">
+            Almacén <br> ECEN
+        </div>
+    </div>
+    <br>
+    <div class="container mx-auto row g-0">
+      <div class="col-12 col-lg-3">
+        <div class="p-3 border text-center" style="background-color: #8BC34A; font-size: 22px; font-weight: bold;">Disponible</div>
+      </div>
+      <div class="col-12 col-lg-3">
+        <div class="p-3 border text-center" style="background-color: #CFD8DC; font-size: 22px; font-weight: bold;">No Disponible</div>
+      </div>
+      <div class="col-12 col-lg-3">
+        <div class="p-3 border text-center" style="background-color: #FFCA28; font-size: 22px; font-weight: bold;">Reservado</div>
+      </div>
+      <div class="col-12 col-lg-3">
+        <div class="p-3 border text-center" style="background-color: #1976D2; font-size: 22px; font-weight: bold;">Administrador</div>
+      </div>
+    </div>
+</div>
   <div class="col-12 col-md-4 mt-3">
     <h3 class="text-center">Habilitar cubículos</h3><br>
     <hr><br>

@@ -1,1 +1,77 @@
-/* No CSS *//*# sourceMappingURL=ofi53.component.css.map */
+.parteA {
+  height: 100px;
+}
+
+.parteB {
+  height: 400px;
+}
+
+.parteB #parteB2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.parteB #parteB3 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.parteC {
+  height: 300px;
+}
+
+.parteC #parteC2 {
+  height: 300px;
+}
+
+.btnD {
+  background-color: #8BC34A;
+}
+
+.btnD:hover {
+  background-color: #689F38;
+}
+
+.btnNoD {
+  background-color: #CFD8DC;
+}
+
+.btnNoD:hover {
+  background-color: #90A4AE;
+}
+
+.btnAD {
+  background-color: #1976D2;
+}
+
+.btnAD:hover {
+  background-color: #0D47A1;
+}
+
+.btnR {
+  background-color: #FFCA28;
+}
+
+.btnR:hover {
+  background-color: #FFA000;
+}
+/*# sourceMappingURL=ofi53.component.css.map */

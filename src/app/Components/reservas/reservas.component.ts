@@ -9,8 +9,14 @@ declare var Swal: any;
 export class ReservasComponent implements OnInit {
 
   date: string = "";
+  date2: string = "";
+  date3: string = "";
   time: string = "";
   time2: string = "";
+  time3: string = "";
+  time4: string = "";
+  time5: string = "";
+  time6: string = "";
   constructor() { }
 
   ngOnInit(): void {

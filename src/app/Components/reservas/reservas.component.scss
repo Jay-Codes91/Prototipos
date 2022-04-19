@@ -65,7 +65,7 @@
     }
 }
 
-#offcanvasExample{
+#offcanvasExample, #offcanvasExample2, #offcanvasExample3 {
     width: 30%;
     @media screen and (max-width: 540px){
         width: 100%;
@@ -76,18 +76,8 @@
      }  
 }
 
-#offcanvasExample2{
-    width: 30%;
-    @media screen and (max-width: 540px){
-        width: 100%;
-     }
-     
-     @media screen and (min-width: 541px) and (max-width: 720px){
-        width: 50%;
-     }  
-}
 
-#startTime, #endTime{
+#startTime, #startTime2, #endTime, #endTime2{
     &:read-only{
         background-color: #ffffff;
     }

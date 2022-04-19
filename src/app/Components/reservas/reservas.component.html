@@ -9,7 +9,7 @@
     </a>
 
     <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-      <li><a class="dropdown-item" href="#">Ayuda</a></li>
+      <li class="dropdown-item" data-bs-toggle="offcanvas" data-bs-target="#Ayuda" style="cursor: pointer;">Ayuda</li>
       <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
       <li>
         <hr class="dropdown-divider">
@@ -186,7 +186,7 @@
                 <td>
                     <button class="btn btn-secondary" type="button" disabled>Reservado</button>
                 </td>
-                <td><button class="btn btn-warning" type="button">Modificar</button></td>
+                <td><button class="btn btn-warning" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample3">Modificar</button></td>
                 <td><button class="btn btn-danger" type="button">Eliminar</button></td>
               </tr>
             </tbody>
@@ -197,6 +197,7 @@
   </p-tabPanel>
 </p-tabView>
 
+<!-------------Reseva de cubículos----------->
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
   <div class="d-flex justify-content-between p-3 border-bottom">
     <h5 class="offcanvas-title fw-bold" id="offcanvasExampleLabel">Reservar espacio</h5>
@@ -257,7 +258,7 @@
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
-    <h3>Sala # 2: Sala general <b>1</b></h3>
+    <h3>Sala # 2: Sala general</h3>
     
     <div class="mt-2">
       <label for="titulo">Correo electrónico</label>
@@ -266,26 +267,115 @@
     <div class="mt-2">
       <label for="rol">Tipo de reunión</label>
       <select class="form-select form-select-lg" id="rol">
-        <option value=""></option>
+        <option value="">Pendiente de Agregar</option>
       </select>
     </div>
     <div class="mt-2">
-      <label for="titulo">Fecha de reserva</label>
-      <input type="text" class="form-control form-control-lg" id="nom">
+      <label for="titulo">Fecha de reserva</label><br>
+      <p-calendar dataType="string" dateFormat="yy/mm/dd" [readonlyInput]="true" [showButtonBar]="true" 
+         [showIcon]="true" inputId="icon" [(ngModel)]="date2" name="fecha2"></p-calendar>
     </div>
     <div class="mt-2">
       <label for="titulo">Hora de inicio</label>
-      <input type="text" class="form-control form-control-lg" id="nom">
+      <input [ngxTimepicker]="picker3" [format]="12" class="form-control form-control-lg" name="time3"
+            data-bs-dismiss="offcanvas" id="startTime2" [(ngModel)]="time3" readonly>
+          <ngx-material-timepicker #picker3 [cancelBtnTmpl]="cancelBtn3" [confirmBtnTmpl]="confirmBtn3">
+          </ngx-material-timepicker>
+
+          <ng-template #cancelBtn3>
+            <button class="btn btn-secondary me-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2">Cancelar</button>
+          </ng-template>
+          <ng-template #confirmBtn3>
+            <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2">Confirmar</button>
+          </ng-template>
     </div>
     <div class="mt-2">
       <label for="titulo">Hora de salida</label>
-      <input type="text" class="form-control form-control-lg" id="nom">
+      <input [ngxTimepicker]="picker4" [format]="12" class="form-control form-control-lg" name="time4"
+            data-bs-dismiss="offcanvas" id="endTime2" [(ngModel)]="time4" readonly>
+          <ngx-material-timepicker #picker4 [cancelBtnTmpl]="cancelBtn4" [confirmBtnTmpl]="confirmBtn4">
+          </ngx-material-timepicker>
+
+          <ng-template #cancelBtn4>
+            <button class="btn btn-secondary me-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2">Cancelar</button>
+          </ng-template>
+          <ng-template #confirmBtn4>
+            <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2">Confirmar</button>
+          </ng-template>
     </div>
     <div class="d-grid mt-4">
-      <button class="btn btn-info" type="submit">Reservar</button>
+      <button class="btn btn-primary" type="submit">Reservar</button>
     </div>
   </div>
 </div>
 
+<!--------------Modificar--------------------->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample3" aria-labelledby="offcanvasExample2Label">
+  <div class="offcanvas-header border-bottom">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Modificar Reserva</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <h3>Sala # 3</h3>
+    
+    <div class="mt-2">
+      <label for="titulo">Correo electrónico</label>
+      <input type="text" class="form-control form-control-lg" id="nom">
+    </div>
+    <div class="mt-2">
+      <label for="rol">Tipo de reunión</label>
+      <select class="form-select form-select-lg" id="rol">
+        <option value="">Pendiente de Agregar</option>
+      </select>
+    </div>
+    <div class="mt-2">
+      <label for="titulo">Fecha de reserva</label><br>
+      <p-calendar dataType="string" dateFormat="yy/mm/dd" [readonlyInput]="true" [showButtonBar]="true" 
+         [showIcon]="true" inputId="icon" [(ngModel)]="date3" name="fecha3"></p-calendar>
+    </div>
+    <div class="mt-2">
+      <label for="titulo">Hora de inicio</label>
+      <input [ngxTimepicker]="picker5" [format]="12" class="form-control form-control-lg" name="time5"
+            data-bs-dismiss="offcanvas" id="startTime2" [(ngModel)]="time5" readonly>
+          <ngx-material-timepicker #picker5 [cancelBtnTmpl]="cancelBtn5" [confirmBtnTmpl]="confirmBtn5">
+          </ngx-material-timepicker>
+
+          <ng-template #cancelBtn5>
+            <button class="btn btn-secondary me-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample3">Cancelar</button>
+          </ng-template>
+          <ng-template #confirmBtn5>
+            <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample3">Confirmar</button>
+          </ng-template>
+    </div>
+    <div class="mt-2">
+      <label for="titulo">Hora de salida</label>
+      <input [ngxTimepicker]="picker6" [format]="12" class="form-control form-control-lg" name="time6"
+            data-bs-dismiss="offcanvas" id="endTime2" [(ngModel)]="time6" readonly>
+          <ngx-material-timepicker #picker6 [cancelBtnTmpl]="cancelBtn6" [confirmBtnTmpl]="confirmBtn6">
+          </ngx-material-timepicker>
+
+          <ng-template #cancelBtn6>
+            <button class="btn btn-secondary me-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample3">Cancelar</button>
+          </ng-template>
+          <ng-template #confirmBtn6>
+            <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample3">Confirmar</button>
+          </ng-template>
+    </div>
+    <div class="d-grid mt-4">
+      <button class="btn btn-primary" type="submit">Reservar</button>
+    </div>
+  </div>
+</div>
+
+<!--------------Ayuda--------------------->
+<div class="offcanvas offcanvas-top" tabindex="-1" id="Ayuda" aria-labelledby="offcanvasExampleLabel" style="height: 100vh;">
+  <div class="offcanvas-header border-bottom">
+    <h3 class="offcanvas-title fw-bold" id="offcanvasExampleLabel">Ayuda - Usuarios</h3>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <h1>Pendiente de agregar</h1>
+  </div>
+</div>
 
 <app-footer></app-footer>

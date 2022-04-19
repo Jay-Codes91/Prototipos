@@ -8,7 +8,7 @@
       </a>
     
       <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
-        <li><a class="dropdown-item" href="#">Ayuda</a></li>
+        <li class="dropdown-item" style="cursor: pointer;" data-bs-toggle="offcanvas" data-bs-target="#Ayuda">Ayuda</li>
         <li><a class="dropdown-item" href="#">Cerrar Sesión</a></li>
         <li><hr class="dropdown-divider"></li>
         <li><h6 class="text-center bol"><b>Hilda Briceño</b></h6></li>
@@ -16,6 +16,16 @@
     </div>
 </div>
 <br><br>
+
+<div class="offcanvas offcanvas-top" tabindex="-1" id="Ayuda" aria-labelledby="offcanvasExampleLabel" style="height: 100vh;">
+  <div class="offcanvas-header border-bottom">
+    <h3 class="offcanvas-title fw-bold" id="offcanvasExampleLabel">Ayuda - Administración</h3>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <h1>Pendiente de agregar</h1>
+  </div>
+</div>
 
 <p-tabView>
   <p-tabPanel header="Pantalla de reservas de la Oficina 5-3">
