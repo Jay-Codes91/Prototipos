@@ -20,6 +20,8 @@ import { SalasComponent } from './Components/mantenimientos/salas/salas.componen
 import { ReservasComponent } from './Components/reservas/reservas.component';
 import { PluginsComponent } from './Components/plugins/plugins.component';
 import { Page404Component } from './Components/page404/page404.component';
+import { HeaderComponent } from './Components/header/header.component';
+import { FooterComponent } from './Components/footer/footer.component';
 
 
 const routes: Routes = [
@@ -45,6 +47,8 @@ const routes: Routes = [
     ReservasComponent,
     PluginsComponent,
     Page404Component,
+    HeaderComponent,
+    FooterComponent,
     
   ],
   imports: [

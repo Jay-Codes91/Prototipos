@@ -1,12 +1,7 @@
-<header class="d-flex justify-content-between">
-  <img src="assets/Logo-ECEN-prov2.png" class="img-fluid" alt="Logo ECEN" width="120" height="120">
-  <div class="align-self-center">
-    <h1 class="text-center">Sistema de reservas de cubículos de trabajo y de salas de reunión de la ECEN</h1>
-  </div>
-  <img src="assets/Logo-Uned-prov.jpg" class="img-fluid" alt="Logo Uned" width="120" height="120">
-</header>
-<div class="container-fluid p-2 d-flex justify-content-between bg-info">
-  <h3 class=" align-self-center">Usuarios - Rol</h3>
+<app-header></app-header>
+
+<div class="container-fluid p-2 d-flex justify-content-between" style="background-color: #1976D2;">
+  <h3 class=" align-self-center text-light">Usuarios</h3>
   <div class="dropdown me-2" title="Usuario: Carlos">
     <a class="btn btn-light dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
       aria-expanded="false">
@@ -27,22 +22,127 @@
 </div>
 
 <p-tabView>
-  <p-tabPanel header="Reservar espacios Oficina 5-3">
-    <div class="container row">
-      <img src="assets/Oficina 5-3.png" class="col-9" alt="Oficina 5-3">
-      <div class="col-3">
-        <button class="btn btn-success" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
-          aria-controls="offcanvasExample">
-          Disponible
-        </button><br><br>
-        <button class="btn btn-secondary" (click)="nodisp()">No disponible</button><br><br>
-        <button class="btn btn-info" (click)="resev()">Reservado</button>
+  <p-tabPanel header="Reservar cubículos - Oficina 5-3">
+    <h3 class="text-center">Resevas de cubículos - <b>Oficina 5-3 (Trabajo Colaborativo)</b></h3><br>
+    <div class="w-100 row">
+      <div class="principal col-12">
+
+        <!-------------ParteA------------->
+        <div class="parteA row border">
+            <div class="col-8 border d-flex justify-content-center align-items-center"><b>Oficina 5-3 (Trabajo Colaborativo)</b></div>
+            <div class="col-4 border m-0 p-0 d-flex justify-content-center align-items-center">
+                Sala #2
+            </div>
+        </div>
+    
+        <!-------------ParteB------------->
+        <div class="parteB row border">
+            <!-------------ParteB1------------->
+            <div class="col-2 border p-0 m-0 row align-items-center">
+                <div class="p-0 m-0">
+                  <button class="btn btnNoD col-12 p-4" type="button">2</button>
+                  <button class="btn btnD  col-12 mt-1 p-4" type="button">1</button>
+                </div>
+            </div>
+            <!-------------ParteB2------------->
+            <div class="col-7 border p-0 m-0" id="parteB2">
+                <!-------------ParteB2.1------------->
+                <div class="row p-0 m-0">
+                    <button class="btn btnR col-3 p-4" type="button" (click)="resev()">3</button>
+                    <button class="btn btnNoD col-3 p-4" type="button">4</button>
+                    <button class="btn btnD col-3 p-4" type="button">5</button>
+                    <button class="btn btnD col-3 p-4" type="button">6</button>
+                </div>
+                <!-------------ParteB2.2------------->
+                <div class="row p-0 m-0">
+                    <button class="btn btnD col-3 p-4" type="button">12</button>
+                    <div class="col-9">
+                      <div class="row row-cols-3 gy-1">
+                        <button class="btn btnNoD p-4" type="button" (click)="nodisp()">11</button>
+                        <button class="btn btnD p-4" type="button">10</button>
+                        <button class="btn btnNoD p-4" type="button">9</button>
+                        <button class="btn btnNoD p-4" type="button">13</button>
+                        <button class="btn btnNoD p-4" type="button">14</button>
+                        <button class="btn btnD p-4" type="button">15</button>
+                      </div>
+                    </div>
+                </div>
+                <!-------------ParteB2.3------------->
+                
+                <div class="flex-row ms-5">
+                    <button class="btn btnAD p-4 ms-3 text-light" type="button" disabled>Admin<br>16</button>
+                </div>
+                
+            </div>
+            <!-------------ParteB3------------->
+            <div class="col-3 border p-0 m-0" id="parteB3">
+                
+                  <button class="btn btnD col-6 p-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">7</button>
+                  <button class="btn btnD col-6 p-4" type="button">8</button>
+                
+                
+            </div>
+        </div>
+    
+        <!-------------ParteC------------>
+        <div class="parteC row border">
+            <div class="col-2 border m-0 p-0 d-flex justify-content-center align-items-center">
+                Sala <br> #1
+            </div>
+            <div class="col-7 border p-0 m-0">
+                <div class="row p-0 m-0" id="parteC2">
+                    <div class="col-3 border p-0 m-0 row align-items-end">
+                        <div class="p-0 m-0">
+                          <button class="btn btnNoD col-12 mt-1 p-4" type="button">#</button>
+                        </div>
+                    </div>
+                    <div class="col-6 border p-0 m-0 row">
+                        <div class="p-0 m-0">
+                            <button class="btn btnNoD col-6 mt-1 p-4" type="button">#</button>
+                            <button class="btn btnNoD col-6 mt-1 p-4" type="button">#</button>
+                          </div>
+                          <div class="p-0 m-0 align-self-end">
+                            <button class="btn btnNoD col-6 mt-1 p-4" type="button">#</button>
+                            <button class="btn btnNoD col-6 mt-1 p-4" type="button">#</button>
+                          </div>
+                    </div>
+                    <div class="col-3 border p-0 m-0 row g-1 flex-row-reverse justify-content-between">
+                        
+                            <button class="btn btnNoD col-12 p-3 " type="button">#</button>
+                            <button class="btn btnNoD col-12 p-3 " type="button">#</button>
+                            <button class="btn btnNoD col-12 p-3 " type="button">#</button>
+                          
+                    </div>
+                </div>
+            </div>
+            <!---->
+            <div class="col-3 border m-0 p-1 d-flex justify-content-center align-items-center">
+                Almacén <br> ECEN
+            </div>
+        </div>
+    
+    </div>
+     
+    </div>
+    <br><br>
+    <div class="container mx-auto row g-0">
+      <div class="col-12 col-lg-3">
+        <div class="p-3 border text-center" style="background-color: #8BC34A; font-size: 22px; font-weight: bold;">Disponible</div>
+      </div>
+      <div class="col-12 col-lg-3">
+        <div class="p-3 border text-center" style="background-color: #CFD8DC; font-size: 22px; font-weight: bold;">No Disponible</div>
+      </div>
+      <div class="col-12 col-lg-3">
+        <div class="p-3 border text-center" style="background-color: #FFCA28; font-size: 22px; font-weight: bold;">Reservado</div>
+      </div>
+      <div class="col-12 col-lg-3">
+        <div class="p-3 border text-center" style="background-color: #1976D2; font-size: 22px; font-weight: bold;">Administrador</div>
       </div>
     </div>
   </p-tabPanel>
-  <p-tabPanel header="Reservar salas">
+  <p-tabPanel header="Reservar salas de reunión">
     <h2 class="text-center">Reservas de salas de reunión</h2><br>
-    <div class="container">
+    <div class="container-fluid">
       <div class="table-responsive">
         <table class="table table-bordered">
             <thead>
@@ -69,7 +169,7 @@
                 <td>n/a</td>
                 <td>n/a</td>
                 <td>
-                    <button class="btn btn-info" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2"
+                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2"
                     aria-controls="offcanvasExample">Reservar</button>
                 </td>
                 <td><button class="btn btn-warning" type="button" disabled>Modificar</button></td>
@@ -97,40 +197,61 @@
   </p-tabPanel>
 </p-tabView>
 
-<div class="offcanvas offcanvas-end w-50" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-  <div class="offcanvas-header border-bottom">
-    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Reservar espacio</h5>
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
+  <div class="d-flex justify-content-between p-3 border-bottom">
+    <h5 class="offcanvas-title fw-bold" id="offcanvasExampleLabel">Reservar espacio</h5>
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
     <form action="">
-      <h3>Cubículo # <b>1</b></h3>
+      <h3>Cubículo # <b>7</b></h3>
      
-      <div class="mt-2">
+      <div class="mt-4">
         <label for="titulo">Correo electrónico</label>
         <input type="text" class="form-control form-control-lg" id="fecha">
       </div>
       <div class="mt-2">
-        <label for="titulo">Fecha de la reserva</label>
-        <input type="text" class="form-control form-control-lg" id="fecha">
+        <label for="fecha">Fecha de la reserva</label>
+        <p-calendar dataType="string" dateFormat="yy/mm/dd" [readonlyInput]="true" [showButtonBar]="true" 
+         [showIcon]="true" inputId="icon" [(ngModel)]="date" name="fecja"></p-calendar>
       </div>
       <div class="mt-2">
         <label for="titulo">Hora de inicio</label>
-        <input type="text" class="form-control form-control-lg" id="hora">
+        <input [ngxTimepicker]="picker" [format]="12" class="form-control form-control-lg" name="time"
+            data-bs-dismiss="offcanvas" id="startTime" [(ngModel)]="time" readonly>
+          <ngx-material-timepicker #picker [cancelBtnTmpl]="cancelBtn" [confirmBtnTmpl]="confirmBtn">
+          </ngx-material-timepicker>
+
+          <ng-template #cancelBtn>
+            <button class="btn btn-secondary me-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Cancelar</button>
+          </ng-template>
+          <ng-template #confirmBtn>
+            <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Confirmar</button>
+          </ng-template>
       </div>
       <div class="mt-2">
         <label for="titulo">Hora de salida</label>
-        <input type="text" class="form-control form-control-lg" id="hora">
+        <input [ngxTimepicker]="picker2" [format]="12" class="form-control form-control-lg" name="time2"
+            data-bs-dismiss="offcanvas" id="startTime" [(ngModel)]="time2" readonly>
+          <ngx-material-timepicker #picker2 [cancelBtnTmpl]="cancelBtn2" [confirmBtnTmpl]="confirmBtn2">
+          </ngx-material-timepicker>
+
+          <ng-template #cancelBtn2>
+            <button class="btn btn-secondary me-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Cancelar</button>
+          </ng-template>
+          <ng-template #confirmBtn2>
+            <button class="btn btn-primary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">Confirmar</button>
+          </ng-template>
       </div>
       <div class="d-grid mt-4">
-        <button class="btn btn-info" type="submit">Reservar</button>
+        <button class="btn btn-primary" type="submit">Reservar</button>
       </div>
     </form>
   </div>
 </div>
 
 <!-------------Reseva de salas--------------->
-<div class="offcanvas offcanvas-end w-50" tabindex="-1" id="offcanvasExample2" aria-labelledby="offcanvasExample2Label">
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample2" aria-labelledby="offcanvasExample2Label">
   <div class="offcanvas-header border-bottom">
     <h5 class="offcanvas-title" id="offcanvasExampleLabel">Reservar sala</h5>
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
@@ -165,3 +286,6 @@
     </div>
   </div>
 </div>
+
+
+<app-footer></app-footer>
