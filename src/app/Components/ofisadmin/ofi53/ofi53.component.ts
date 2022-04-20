@@ -4,6 +4,7 @@ import listPlugin from '@fullcalendar/list';
 import timeGridPlugin from '@fullcalendar/timegrid';
 //import esLocale from '@fullcalendar/core/locales/es';
 declare var Swal: any;
+declare var $: any;
 @Component({
   selector: 'app-ofi53',
   templateUrl: './ofi53.component.html',
@@ -19,17 +20,21 @@ export class Ofi53Component implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+ 
+    
+
     this.options = {
       plugins: [interactionPlugin, listPlugin],
-      defaultView: 'listDay',
+      defaultView: 'listWeek',
       //locale: esLocale,
       header: {
         left: 'prev,today',
         center: 'title',
-        right: 'listWeek,next'
+        right: 'listDay,listWeek,next'
       },
       buttonText: {
         today: 'Hoy',
+        listDay: 'Día',
         listWeek: 'Semana'
       }
     }
@@ -38,7 +43,7 @@ export class Ofi53Component implements OnInit {
       {
         id: 1,
         title: 'Marco Matarrita - Cubículo #5',
-        start: '2022-04-07T10:30:00',
+        start: '2022-04-20T10:30:00',
         end: '2022-04-07T15:00:00'
       }
     ]
@@ -50,10 +55,11 @@ export class Ofi53Component implements OnInit {
       header: {
         left: 'prev,today',
         center: 'title',
-        right: 'listWeek,next'
+        right: 'listDay,listWeek,next'
       },
       buttonText: {
         today: 'Hoy',
+        listDay: 'Día',
         listWeek: 'Semana'
       }
     }
@@ -62,8 +68,8 @@ export class Ofi53Component implements OnInit {
       {
         id: 1,
         title: 'Marco Matarrita - Sala 2: Sala General',
-        start: '2022-04-07T10:30:00',
-        end: '2022-04-07T15:00:00'
+        start: '2022-04-21T10:30:00',
+        end: '2022-04-21T15:00:00'
       }
     ]
 

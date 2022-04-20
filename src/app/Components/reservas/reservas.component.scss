@@ -38,30 +38,36 @@
 }
 
 .btnD{
-    background-color: #8BC34A;
+    background-color: rgb(255, 108, 54);
+    font-size: 25px;
+    font-weight: bold;
     &:hover{
-        background-color: #689F38;
+        background-color: rgba(255, 108, 54, 0.8);
     }
 }
 
 .btnNoD{
-    background-color: #CFD8DC;
+    background-color: rgb(204, 204, 204);
+    font-size: 25px;
+    font-weight: bold;
     &:hover{
-        background-color: #90A4AE;
+        background-color: rgba(204, 204, 204, 0.8);
     }
 }
 
 .btnAD{
-    background-color: #1976D2;
+    background-color: rgb(0, 81, 158);
     &:hover{
-        background-color: #0D47A1;
+        background-color: rgba(0, 81, 158, 0.8);
     }
 }
 
 .btnR{
-    background-color: #FFCA28;
+    background-color: rgb(255, 200, 67);
+    font-size: 25px;
+    font-weight: bold;
     &:hover{
-        background-color: #FFA000;
+        background-color: rgba(255, 200, 67, 0.8);
     }
 }
 
