@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+declare var Swal: any;
 
 @Component({
   selector: 'app-admin',
@@ -11,5 +12,7 @@ export class AdminComponent implements OnInit {
 
   ngOnInit(): void {
   }
+
+  
 
 }

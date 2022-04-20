@@ -19,8 +19,12 @@
       </li>
     </ul>
   </div>
-</div>
-
+</div><br>
+<div class="container-fluid  text-center">
+  <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reservasC">
+    Información
+  </button>
+</div><br>
 <p-tabView>
   <p-tabPanel header="Reservar cubículos - Oficina 5-3">
     <h3 class="text-center">Resevas de cubículos - <b>Oficina 5-3 (Trabajo Colaborativo)</b></h3><br>
@@ -379,3 +383,31 @@
 </div>
 
 <app-footer></app-footer>
+
+<div class="modal fade" id="reservasC" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Reservas de Cubículos y salas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <br><h2 class="fw-bold">Reservas de cubículos</h2><br>
+        <h4>Para realizar una reserva el usuario selecciona el cubículo que se encuentre <b>Disponible</b> y llenar el formulario de reserva.</h4>
+        <h4>Nota: Solo el usuario que realiza la reserva puede eliminar o modificar su reserva, a los demás no le aparece el botón modificar y eliminar</h4>
+        <h4>Cada cubículo corresponde a un botón y puede presentar 3 estados y 3 colores</h4>
+        <h4>Los botones <b>3, 7 y 11</b> están activos para prueben como funciona según sus estados</h4>
+
+        <h2 class="fw-bold">Reserva de salas de reunión</h2><br>
+        <h4>En esta sección se muestran todas las salas de reunión que se encuantran activas</h4>
+        <h4>Se muestra al usuario la información de cada sala y las opciones para reservar</h4>
+        <h4>Para reservar un sala el usuario presiona el boton <b>Reservar</b> y llenar el formulario</h4>
+        <h4>El usuario puede modificar o eliminar su reserva.</h4>
+        <h4>Nota. Solo el usuario que hace la reserva puede modificar o eliminarla</h4>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -69,24 +69,24 @@
             <div class="row p-0 m-0" id="parteC2">
                 <div class="col-3 border p-0 m-0 row align-items-end">
                     <div class="p-0 m-0">
-                      <button class="btn btnNoD col-12 mt-1 p-4" type="button">#</button>
+                      <button class="btn btnNoD col-12 mt-1 p-4" type="button">?</button>
                     </div>
                 </div>
                 <div class="col-6 border p-0 m-0 row">
                     <div class="p-0 m-0">
-                        <button class="btn btnNoD col-6 mt-1 p-4" type="button">#</button>
-                        <button class="btn btnNoD col-6 mt-1 p-4" type="button">#</button>
+                        <button class="btn btnNoD col-6 mt-1 p-4" type="button">?</button>
+                        <button class="btn btnNoD col-6 mt-1 p-4" type="button">?</button>
                       </div>
                       <div class="p-0 m-0 align-self-end">
-                        <button class="btn btnNoD col-6 mt-1 p-4" type="button">#</button>
-                        <button class="btn btnNoD col-6 mt-1 p-4" type="button">#</button>
+                        <button class="btn btnNoD col-6 mt-1 p-4" type="button">?</button>
+                        <button class="btn btnNoD col-6 mt-1 p-4" type="button">?</button>
                       </div>
                 </div>
                 <div class="col-3 border p-0 m-0 row g-1 flex-row-reverse justify-content-between">
                     
-                        <button class="btn btnNoD col-12 p-3 " type="button">#</button>
-                        <button class="btn btnNoD col-12 p-3 " type="button">#</button>
-                        <button class="btn btnNoD col-12 p-3 " type="button">#</button>
+                        <button class="btn btnNoD col-12 p-3 " type="button">?</button>
+                        <button class="btn btnNoD col-12 p-3 " type="button">?</button>
+                        <button class="btn btnNoD col-12 p-3 " type="button">?</button>
                       
                 </div>
             </div>
@@ -161,6 +161,11 @@
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
+    <div class="container-fluid  text-center">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#reservas">
+        Información
+      </button>
+    </div><br>
     <div class="container-fluid">
       <p-tabView>
         <p-tabPanel header="Cubículos">
@@ -260,4 +265,22 @@
   </div>
 </div>
 
-
+<div class="modal fade" id="reservas" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Reservas activas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h3>En esta sección se muestran todas las reservas activas de los cubiculos y de las salas de reuniones</h3>
+        <br>
+        <h3>Se incluyen calendarios que muestran el día y las horas de las reservas</h3>
+        <h3>El calendario muestra una lista de todas las reservas, ya sea de toda la semana y de un día de la semana.</h3>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>

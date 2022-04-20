@@ -27,13 +27,25 @@
   </div>
 </div>
 
+  <h1 class="text-center">Sistema de Control del Administrador</h1><br>
+  
 <p-tabView>
   <p-tabPanel header="Pantalla de reservas de la Oficina 5-3">
-      <h1 class="text-center">Control de las Reservas de cubículos y salas de reunión</h1>
-      <br>
+    <h3 class=" text-center">Cubículos y Salas de reunión</h3><br>
+    <div class="container-fluid  text-center">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#admin">
+        Información
+      </button>
+    </div><br>
       <app-ofi53></app-ofi53>
   </p-tabPanel>
   <p-tabPanel header="Mantenimiento de usuarios y salas">
+    <h3 class="text-center">Mantenimiento de Usuarios Y Salas de Reunión</h3><br>
+    <div class="container-fluid  text-center">
+      <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#mant">
+        Información
+      </button>
+    </div><br>
     <div class="container-fluid m-0 p-0">
       <p-tabView>
           <p-tabPanel header="Usuarios">
@@ -49,3 +61,53 @@
 
 <app-footer></app-footer>
 
+<div class="modal fade" id="admin" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Administración</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h3 class="fw-bold">Pantalla de reservas de la oficina 5-3</h3><br>
+
+        <h5>
+            En la <b>parte izquierda</b>, se incluye un mapa de la oficina 5-3 con la ubicación
+            de cada cubículo y su número correspondiente. Cada cubículo es un botón y pueden presentar 3 estados y 3 colores.  
+        </h5>
+        <h5>La administradora puede presionar los botones para conocer su estado </h5>
+        <h5>Los botones <b>3, 11 y 7</b> están habilitados como un ejemplo de como funciona</h5>
+        <h5>En la <b>parte derecha</b> la administradora puede habilitar o deshabilitar cubículos según su estado</h5>
+        <h5>En la  parte de reservas activas se incluye un botón que muesttra todas las reservas de 
+          cubículos y de salas.
+        </h5>
+        <h5>Los botones con el signo <b>?</b> son los que falta de enumerar</h5>
+        <h5>Solicito que me envien la numeración de cada uno</h5>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="mant" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Mantenimieno de usuarios y salas</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h1>Usuarios</h1><br>
+        <h3>La administradora puede visualizar en pantalla la lista de usuarios, agregar, modificar o desactivarlos.</h3>
+        <h3>Se incluye un buscador, donde la administradora busca por el <b>nombre</b> a los usuarios</h3><br>
+        <h1>Salas</h1><br>
+        <h3>La administradora puede visualizar en pantalla la lista de salas, agregar, modificar o desactivarlas</h3>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
