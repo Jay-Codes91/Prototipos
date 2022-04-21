@@ -26,6 +26,7 @@ export class Ofi53Component implements OnInit {
     this.options = {
       plugins: [interactionPlugin, listPlugin],
       defaultView: 'listWeek',
+      defaultDate: '2022-04-20',
       //locale: esLocale,
       header: {
         left: 'prev,today',
@@ -42,15 +43,16 @@ export class Ofi53Component implements OnInit {
     this.events = [
       {
         id: 1,
-        title: 'Marco Matarrita - Cubículo #5',
+        title: 'Marco Matarrita - Cubículo #3',
         start: '2022-04-20T10:30:00',
-        end: '2022-04-07T15:00:00'
+        end: '2022-04-20T15:00:00'
       }
     ]
 
     this.options2 = {
       plugins: [interactionPlugin, listPlugin],
       defaultView: 'listWeek',
+      defaultDate: '2022-04-20',
       //locale: esLocale,
       header: {
         left: 'prev,today',
@@ -67,9 +69,9 @@ export class Ofi53Component implements OnInit {
     this.events2 = [
       {
         id: 1,
-        title: 'Marco Matarrita - Sala 2: Sala General',
-        start: '2022-04-21T10:30:00',
-        end: '2022-04-21T15:00:00'
+        title: 'Pedro Hernández - Sala 1: Asesoría Académica',
+        start: '2022-04-20T10:30:00',
+        end: '2022-04-20T11:30:00'
       }
     ]
 
@@ -79,7 +81,7 @@ export class Ofi53Component implements OnInit {
     Swal.fire({
       icon: 'info',
       title: '<strong>Cubículo Reservado</strong>',
-      html: '<h5><b>Usuario: </b>Mario Matarrita</h5>'+
+      html: '<h5><b>Usuario: </b>Carlos Matarrita</h5>'+
             '<h5><b>Rol: </b>Encargado de cátedra</h5>',
       footer: '<button class="btn btn-danger" type="button">Eliminar Reserva</button>'
       
