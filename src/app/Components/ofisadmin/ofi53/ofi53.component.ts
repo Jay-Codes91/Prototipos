@@ -43,9 +43,15 @@ export class Ofi53Component implements OnInit {
     this.events = [
       {
         id: 1,
-        title: 'Marco Matarrita - Cubículo #3',
-        start: '2022-04-25T10:30:00',
-        end: '2022-04-25T15:00:00'
+        title: 'Carlos Matarrita - Cubículo #3',
+        start: '2022-04-26T10:30:00',
+        end: '2022-04-26T15:00:00'
+      },
+      {
+        id: 2,
+        title: 'Lucía Mora - Cubículo #8',
+        start: '2022-04-28T09:00:00',
+        end: '2022-04-28T16:00:00'
       }
     ]
 
@@ -69,9 +75,9 @@ export class Ofi53Component implements OnInit {
     this.events2 = [
       {
         id: 1,
-        title: 'Pedro Hernández - Sala 1: Asesoría Académica',
-        start: '2022-04-25T10:30:00',
-        end: '2022-04-25T11:30:00'
+        title: 'Carlos Matarrita - Sala 1: Asesoría Académica',
+        start: '2022-04-27T10:30:00',
+        end: '2022-04-27T11:30:00'
       }
     ]
 
@@ -166,14 +172,27 @@ export class Ofi53Component implements OnInit {
       icon: 'info',
       title: '<strong>Cubículo Reservado</strong>',
       html: '<h5><b>Usuario: </b>Carlos Matarrita</h5>'+
-            '<h5><b>Rol: </b>Encargado de cátedra</h5>' +
-            '<h5><b>Fecha: </b>XXXXXXXX</h5>' +
-            '<h5><b>Hora: </b>XXXXX</h5>',
+            '<h5><b>Rol: </b>Encargado de XXXXXX</h5>' +
+            '<h5><b>Fecha: </b>2022-04-26</h5>' +
+            '<h5><b>Hora: </b>8:00am - 3:00pm</h5>',
       confirmButtonText: 'Aceptar',
       confirmButtonColor: 'rgb(0, 81, 158)'
     })
   }
 
+  resev2(){
+    Swal.fire({
+      icon: 'info',
+      title: '<strong>Cubículo Reservado</strong>',
+      html: '<h5><b>Usuario: </b>Lucia Mora</h5>'+
+            '<h5><b>Rol: </b>Asistente de XXXXXX</h5>'+
+            '<h5><b>Fecha: </b>2022-04-28</h5>' +
+            '<h5><b>Hora: </b>9:00am - 4:00pm</h5>',
+      confirmButtonText: 'Aceptar',
+      confirmButtonColor: 'rgb(0, 81, 158)'
+      
+    })
+  }
   nodisp(){
     Swal.fire({
       icon: 'error',

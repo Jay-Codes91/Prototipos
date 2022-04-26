@@ -15,7 +15,7 @@ export class UsuariosComponent implements OnInit {
   actUser(){
     Swal.fire({
       title: '¿Deseas habilitar este usuario?',
-      text: 'El usuario posdrá acceder al sistema y realizar reservas',
+      text: 'El usuario podrá acceder al sistema y realizar reservas',
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: 'rgb(0, 81, 158)',

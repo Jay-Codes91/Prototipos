@@ -2,4 +2,13 @@
 thead {
   background-color: #cccccc;
 }
+
+.modal-header {
+  background-color: #ff6c36;
+  color: #ffffff;
+}
+
+.modal-footer {
+  background-color: #cccccc;
+}
 /*# sourceMappingURL=styles.css.map */

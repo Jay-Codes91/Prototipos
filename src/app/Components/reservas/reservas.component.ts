@@ -26,7 +26,7 @@ export class ReservasComponent implements OnInit {
     Swal.fire({
       icon: 'error',
       title: 'Cubículo no disponible',
-      text: 'Para obtener más información consulta al administrador',
+      text: 'Motivo abcdefg',
       confirmButtonText: 'Aceptar',
       confirmButtonColor: 'rgb(0, 81, 158)'
     })
@@ -36,17 +36,16 @@ export class ReservasComponent implements OnInit {
     Swal.fire({
       icon: 'info',
       title: '<strong>Cubículo Reservado</strong>',
-      html: '<h5><b>Usuario: </b>Mario Matarrita</h5>'+
-            '<h5><b>Rol: </b>Encargado de cátedra</h5>'+
-            '<h5><b>Fecha: </b>XXXXXXXX</h5>' +
-            '<h5><b>Hora: </b>XXXXX</h5>'+
+      html: '<h5><b>Usuario: </b>Carlos Matarrita</h5>'+
+            '<h5><b>Rol: </b>Encargado de XXXXXX</h5>'+
+            '<h5><b>Fecha: </b>2022-04-26</h5>' +
+            '<h5><b>Hora: </b>8:00am - 3:00pm</h5>'+
             '<hr>',
       showDenyButton: true,
-      showCancelButton: true,  
-      confirmButtonText: 'Modificar',
+      showCancelButton: true,
+      showConfirmButton: false,  
       denyButtonText: 'Eliminar Reserva',
-      cancelButtonText: 'Cerrar',
-      confirmButtonColor: 'rgb(255, 200, 67)'
+      cancelButtonText: 'Cerrar'
       
     }).then((result) => {
       if (result.isConfirmed) {
@@ -64,7 +63,7 @@ export class ReservasComponent implements OnInit {
           if (result.isConfirmed) {
             Swal.fire({
               icon: 'success',
-              title: 'Reseva eliminada',
+              title: 'Reserva eliminada',
               confirmButtonText: 'Aceptar',
               confirmButtonColor: 'rgb(0, 81, 158)'
 
@@ -76,6 +75,45 @@ export class ReservasComponent implements OnInit {
     })
   }
 
- 
+  resev2(){
+    Swal.fire({
+      icon: 'info',
+      title: '<strong>Cubículo Reservado</strong>',
+      html: '<h5><b>Usuario: </b>Lucia Mora</h5>'+
+            '<h5><b>Rol: </b>Asistente de XXXXXX</h5>'+
+            '<h5><b>Fecha: </b>2022-04-28</h5>' +
+            '<h5><b>Hora: </b>9:00am - 4:00pm</h5>',
+      showDenyButton: false,
+      showCancelButton: true,
+      showConfirmButton: false,  
+      cancelButtonText: 'Cerrar'
+      
+    })
+  }
+
+  reservaSala(){
+    Swal.fire({
+      title: '¿Deseas eliminar tu reserva?',
+      text: "No podrás utilizar este espacio",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonText: 'Aceptar',
+      cancelButtonText: 'Cerrar',
+      confirmButtonColor: 'rgb(0, 81, 158)'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        Swal.fire({
+          icon: 'success',
+          title: 'Reserva eliminada',
+          confirmButtonText: 'Aceptar',
+          confirmButtonColor: 'rgb(0, 81, 158)'
+
+        })
+          
+      }
+    })
+  }
+
+  
 
 }

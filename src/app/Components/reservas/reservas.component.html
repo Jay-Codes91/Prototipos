@@ -82,7 +82,7 @@
             <div class="col-3 border p-0 m-0" id="parteB3">
                 
                   <button class="btn btnD col-6 p-4" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample">7</button>
-                  <button class="btn btnD col-6 p-4" type="button">8</button>
+                  <button class="btn btnR col-6 p-4" type="button" (click)="resev2()" >8</button>
                 
                 
             </div>
@@ -164,33 +164,34 @@
             <tbody>
               <tr>
                 <th scope="row">Oficina 5-3</th>
-                <td>Sala 1: Asesorìa general</td>
-                <td>xx</td>
-                <td>xx</td>
-                <td><span class="badge bg-primary text-black" style="font-size: 15px;">Disponible</span></td>
+                <td>Sala 1: Asesoría académica</td>
+                <td>6</td>
+                <td>4</td>
+                <td><span class="badge bg-warning text-black" style="font-size: 15px;">Reservado</span></td>
                 <td>
-                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2"
-                    aria-controls="offcanvasExample">Reservar</button>
+                    <button class="btn btn-primary" type="button"
+                    aria-controls="offcanvasExample" disabled>Reservado</button>
+                </td>
+                <td>
+                  <button class="btn btn-danger" type="button" (click)="reservaSala()" >Eliminar</button>
+                </td>
+                <td><button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#info1">Información</button></td>
+              </tr>
+              <!----------------------------->
+              <tr>
+                <th scope="row">Oficina 5-1</th>
+                <td>Sala 1</td>
+                <td>6</td>
+                <td>2</td>
+                <td><span class="badge text-black" style="font-size: 15px; background-color: rgb(255, 108, 54);">Disponible</span></td>
+                <td>
+                    <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2">Reservar</button>
                 </td>
                 <td>
                   <button class="btn btn-danger" type="button" disabled>Eliminar</button>
                 </td>
-                <td><button class="btn btn-primary" type="button" disabled>Información</button></td>
-              </tr>
-              <tr>
-                <th scope="row">Oficina 5-1</th>
-                <td>Sala 3</td>
-                <td>xx</td>
-                <td>xx</td>
-                <td><span class="badge bg-warning text-black" style="font-size: 15px;">Reservado</span></td>
-                <td>
-                    <button class="btn btn-primary" type="button" disabled>Reservar</button>
-                </td>
-                <td>
-                  <button class="btn btn-danger" type="button">Eliminar</button>
-                </td>
                 <!--<td><button class="btn btn-warning" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample3">Modificar</button></td>-->
-                <td><button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#info1">Información</button></td>
+                <td><button class="btn btn-primary" type="button" disabled>Información</button></td>
               </tr>
             </tbody>
           </table>
@@ -446,10 +447,10 @@
       </div>
       <div class="modal-body">
         <h4 class="text-center fw-bold">Reserva</h4><br>
-        <h4><b>Reservado para: </b>XXXXXX</h4>
-        <h4><b>Rol: </b>XXXXXXXX</h4>
-        <h4><b>Fecha: </b>XXXXXXX</h4>
-        <h4><b>Hora: </b>XXXXXXX</h4><br>
+        <h4><b>Reservado para: </b>Carlos Matarrita</h4>
+        <h4><b>Rol: </b>Encargado de XXXXXX</h4>
+        <h4><b>Fecha: </b>2022-04-28</h4>
+        <h4><b>Hora: </b>10:30am - 11:30am</h4><br>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
