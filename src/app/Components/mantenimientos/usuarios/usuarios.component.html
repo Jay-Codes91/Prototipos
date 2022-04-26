@@ -2,12 +2,50 @@
 <br>
 
 <div class="princ p-1">
+
+  <!--<div class="card w-50 mx-auto">
+    <div class="card-header text-center">
+       <h2>Añadir/Modificar Usuarios</h2>
+    </div>
+    <div class="card-body">
+      <form action="">
+        <div>
+          <label for="titulo">Nombre</label>
+          <input type="text" class="form-control form-control-lg" id="nom">
+      </div>
+      <div class="mt-2">
+          <label for="titulo">Primer Apellido</label>
+          <input type="text" class="form-control form-control-lg" id="nom">
+      </div>
+      <div class="mt-2">
+          <label for="titulo">Segundo Apellido</label>
+          <input type="text" class="form-control form-control-lg" id="nom">
+      </div>
+      <div>
+        <label for="rol">Seleccione el rol del usuario</label>
+        <select class="form-select form-select-lg" id="rol">
+          <option value="" selected>Selecciona el rol</option>
+        </select>
+      </div>
+      <div class="mt-2">
+        <label for="titulo">Correo electrónico</label>
+        <input type="email" class="form-control form-control-lg" id="correo">
+      </div>
+      
+      <div class="d-grid mt-4">
+        <button class="btn btn-primary" type="submit">Añadir</button>
+      </div><br>
+      </form>
+    </div>
+  </div><br><br>-->
+
     <div class="card">
-        <div class="card-header">
-            <h2>Lista de Usuarios</h2>
-            <i class="fa-regular fa-circle-user" style="font-size: 40px; margin-bottom: 5px;"></i>
-            <button type="button" class=" btn btn-primary me-2 mt-1" data-bs-toggle="offcanvas" data-bs-target="#addUser"
-            aria-controls="offcanvasExample">Añadir Usuario</button>
+        <div class="card-header d-flex justify-content-between">
+          <div class="d-flex">
+            <i class="fa-regular fa-circle-user align-self-center" style="font-size: 35px;"></i>
+          <h2 class="ms-2">Lista de Usuarios</h2>
+          </div>
+          <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#addUser">Añadir Usuarios</button>
         </div>
         <div class="card-body">
             <div class="buscador">
@@ -41,11 +79,11 @@
                         <td>Encargado de carreras</td>
                         <td>carlos.matarrita@uned.ac.cr</td>
                         <td>Activo</td>
-                        <td>
-                            <button class="btn btn-warning" type="button">Modificar</button>
+                        <td class="text-center">
+                            <button class="btn btn-warning" type="button" data-bs-toggle="offcanvas" data-bs-target="#modUser">Modificar</button>
                         </td>
-                        <td>
-                            <button class="btn btn-danger" type="button">Desactivar</button>
+                        <td class="text-center">
+                            <button class="btn btn-danger" type="button" (click)="desUser()" >Desactivar</button>
                         </td>
                       </tr>
                       <tr>
@@ -56,11 +94,11 @@
                         <td>Encargado de cátedra</td>
                         <td>maritza.salazar@uned.ac.cr</td>
                         <td>Inactivo</td>
-                        <td>
+                        <td class="text-center">
                             <button class="btn btn-warning" type="button" disabled>Modificar</button>
                         </td>
-                        <td>
-                            <button class="btn btn-danger" type="button">Activar</button>
+                        <td class="text-center">
+                            <button class="btn btn-danger" type="button" (click)="actUser()" >Activar</button>
                         </td>
                       </tr>
                     </tbody>
@@ -108,5 +146,41 @@
   </div>
 </div>
 
+<div class="offcanvas offcanvas-end" tabindex="-1" id="modUser" aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header border-bottom">
+    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Modificar usuarios</h5>
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body">
+    <form action="">
+      <div>
+        <label for="titulo">Nombre</label>
+        <input type="text" class="form-control form-control-lg" id="nom">
+    </div>
+    <div class="mt-2">
+        <label for="titulo">Primer Apellido</label>
+        <input type="text" class="form-control form-control-lg" id="nom">
+    </div>
+    <div class="mt-2">
+        <label for="titulo">Segundo Apellido</label>
+        <input type="text" class="form-control form-control-lg" id="nom">
+    </div>
+    <div>
+      <label for="rol">Seleccione el rol del usuario</label>
+      <select class="form-select form-select-lg" id="rol">
+        <option value="" selected>Selecciona el rol</option>
+      </select>
+    </div>
+    <div class="mt-2">
+      <label for="titulo">Correo electrónico</label>
+      <input type="email" class="form-control form-control-lg" id="correo">
+    </div>
+    
+    <div class="d-grid mt-4">
+      <button class="btn btn-primary" type="submit">Aceptar</button>
+    </div><br>
+    </form>
+  </div>
+</div>
 
 

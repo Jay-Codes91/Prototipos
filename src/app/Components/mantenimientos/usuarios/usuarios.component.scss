@@ -13,25 +13,7 @@
      }
 }
 
-.card-header{
-    display: flex;
-    justify-content: space-between;
-    .ico{
-        font-size: 40px;
-    }
-    @media screen and (max-width: 540px){
-        flex-direction: column;
-        h2{
-            text-align: center;
-            
-        }
-        i{
-            margin-bottom: 20px;
-            
-        }
-     }
-     
-}
+
 
 .addUser{
     width: 30%;

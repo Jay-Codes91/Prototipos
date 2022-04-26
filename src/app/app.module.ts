@@ -8,6 +8,7 @@ import {InputTextModule} from 'primeng-lts/inputtext';
 import {TabViewModule} from 'primeng-lts/tabview';
 import {CalendarModule} from 'primeng-lts/calendar';
 import {InputNumberModule} from 'primeng-lts/inputnumber';
+import {AccordionModule} from 'primeng-lts/accordion';
 import {FullCalendarModule} from 'primeng-lts/fullcalendar';
 import {NgxMaterialTimepickerModule} from 'ngx-material-timepicker';
 import { AppComponent } from './app.component';
@@ -60,6 +61,7 @@ const routes: Routes = [
     TabViewModule,
     CalendarModule,
     InputNumberModule,
+    AccordionModule,
     NgxMaterialTimepickerModule,
     FullCalendarModule,
     RouterModule.forRoot(routes)

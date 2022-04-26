@@ -1,11 +1,11 @@
-<h3 class="text-center"><b>Oficina 5-3</b></h3><br>
+
 
 <div class="container-fluid row m-0 p-0">
   <div class="principal col-12 col-md-8">
 
     <!-------------ParteA------------->
     <div class="parteA row border">
-        <div class="col-8 border d-flex justify-content-center align-items-center"><b>Oficina 5-3 (Trabajo Colaborativo)</b></div>
+        <div class="col-8 border d-flex justify-content-center align-items-center"><b>Cubículos (Trabajo Colaborativo)</b></div>
         <div class="col-4 border m-0 p-0 d-flex justify-content-center align-items-center">
             Sala #2
         </div>
@@ -46,7 +46,7 @@
             <!-------------ParteB2.3------------->
             
             <div class="flex-row ms-5">
-                <button class="btn btnAD p-4 ms-3 text-light" type="button" disabled>Admin<br>16</button>
+                <button class="btn btnAD p-4 ms-3 text-light" type="button" (click)="admin()" >Admin<br>16</button>
             </div>
             
         </div>
@@ -135,8 +135,10 @@
     <br>
     <h3 class="text-center">Inhabilitar cubículos</h3><br>
     <hr><br>
+    <form action="">
 
-    <div class="d-flex">
+    </form>
+    <div>
       <select class="form-select form-select-lg me-2" id="rol">
         <option value="">Seleccione un cubículo</option>
         <option value="">1</option>
@@ -147,12 +149,17 @@
         <option value="">10</option>
         <option value="">12</option>
         <option value="">15</option>
-
       </select>
+    </div>
+    <div class="mt-2">
+      <label for="motivo">Indique el motivo</label>
+       <textarea class=" form-control" id="moivo" cols="30" rows="8"></textarea>
+    </div>
+    <div class="mt-2 text-center">
       <button class="btn btn-danger" type="submit">Inhabilitar</button>
-    </div><br>
-
-    <h3 class="text-center"><b>Reservas Activas</b></h3><br>
+    </div>
+    <br>
+    <h3 class="text-center"><b>Cubículos y salas reservadas</b></h3><br>
 
     <div class="text-center">
       <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample3"
@@ -170,7 +177,7 @@
 
 <div class="offcanvas offcanvas-top" tabindex="-1" id="offcanvasExample3" aria-labelledby="offcanvasExampleLabel" style="height: 100vh;">
   <div class="offcanvas-header">
-    <h3 class="offcanvas-title" id="offcanvasExampleLabel"><b>Reservas Activas</b></h3>
+    <h3 class="offcanvas-title" id="offcanvasExampleLabel"><b>Cubículos y salas de reunión reservadas</b></h3>
     <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
   </div>
   <div class="offcanvas-body">
@@ -181,7 +188,7 @@
     </div><br>
     <div class="container-fluid">
       <p-tabView>
-        <p-tabPanel header="Cubículos">
+        <p-tabPanel header="Cubículos - Oficina 5-3">
           <div class="table-responsive">
             <table class="table table-bordered">
               <thead>
@@ -205,13 +212,13 @@
                   <td>2022-04-20</td>
                   <td>10:30 am</td>
                   <td>03:00 pm</td>
-                  <td><button class="btn btn-danger" type="button">Eliminar</button></td>
+                  <td><button class="btn btn-danger" type="button" (click)="userReser()" >Eliminar</button></td>
                 </tr>
               </tbody>
             </table>
           </div>
         </p-tabPanel>
-        <p-tabPanel header="Salas (Todas las oficinas)">
+        <p-tabPanel header="Salas de reunión">
           <div class="table-responsive">
             <table class="table table-bordered">
               <thead>
@@ -239,7 +246,7 @@
                   <td>10:30 am</td>
                   <td>11:30 am</td>
                   <td>Reunion abcdefe</td>
-                  <td><button class="btn btn-danger" type="button">Eliminar</button></td>
+                  <td><button class="btn btn-danger" type="button" (click)="salaReserv()" >Eliminar</button></td>
                 </tr>
               </tbody>
             </table>
@@ -250,7 +257,7 @@
           <div class="container-fluid">
             <div class="row p-0 m-0">
               <div class="col-12">
-                <h4 class="text-center">Reservas de cubículos</h4><br>
+                <h4 class="text-center fw-bold">Lista reservas de cubículos</h4><br>
                 <p-fullCalendar [events]="events" [options]="options"></p-fullCalendar>
               </div>
             </div>
@@ -261,7 +268,7 @@
           <div class="container-fluid">
             <div class="row p-0 m-0">
               <div class="col-12">
-                <h4 class="text-center">Reservas de salas</h4><br>
+                <h4 class="text-center fw-bold">Lista reservas de salas de reunión</h4><br>
                 <p-fullCalendar [events]="events2" [options]="options2"></p-fullCalendar>
               </div>
             </div>
@@ -282,7 +289,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Reservas activas</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Cubículos y salas de reunión reservadas</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">

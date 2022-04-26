@@ -9,4 +9,14 @@
   width: 80px;
   height: 80px;
 }
+
+.title .titulo {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.ecen {
+  background-color: #00519e;
+}
 /*# sourceMappingURL=header.component.css.map */

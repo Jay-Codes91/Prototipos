@@ -19,34 +19,6 @@
   }
 }
 
-.card-header {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-.card-header .ico {
-  font-size: 40px;
-}
-
-@media screen and (max-width: 540px) {
-  .card-header {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-  .card-header h2 {
-    text-align: center;
-  }
-  .card-header i {
-    margin-bottom: 20px;
-  }
-}
-
 .addUser {
   width: 30%;
 }

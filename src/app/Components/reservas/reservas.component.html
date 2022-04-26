@@ -97,24 +97,24 @@
                 <div class="row p-0 m-0" id="parteC2">
                     <div class="col-3 border p-0 m-0 row align-items-end">
                         <div class="p-0 m-0">
-                          <button class="btn btnNoD col-12 mt-1 p-4" type="button">#</button>
+                          <button class="btn btnNoD col-12 mt-1 p-4" type="button">?</button>
                         </div>
                     </div>
                     <div class="col-6 border p-0 m-0 row">
                         <div class="p-0 m-0">
-                            <button class="btn btnNoD col-6 mt-1 p-4" type="button">#</button>
-                            <button class="btn btnNoD col-6 mt-1 p-4" type="button">#</button>
+                            <button class="btn btnNoD col-6 mt-1 p-4" type="button">?</button>
+                            <button class="btn btnNoD col-6 mt-1 p-4" type="button">?</button>
                           </div>
                           <div class="p-0 m-0 align-self-end">
-                            <button class="btn btnNoD col-6 mt-1 p-4" type="button">#</button>
-                            <button class="btn btnNoD col-6 mt-1 p-4" type="button">#</button>
+                            <button class="btn btnNoD col-6 mt-1 p-4" type="button">?</button>
+                            <button class="btn btnNoD col-6 mt-1 p-4" type="button">?</button>
                           </div>
                     </div>
                     <div class="col-3 border p-0 m-0 row g-1 flex-row-reverse justify-content-between">
                         
-                            <button class="btn btnNoD col-12 p-3 " type="button">#</button>
-                            <button class="btn btnNoD col-12 p-3 " type="button">#</button>
-                            <button class="btn btnNoD col-12 p-3 " type="button">#</button>
+                            <button class="btn btnNoD col-12 p-3 " type="button">?</button>
+                            <button class="btn btnNoD col-12 p-3 " type="button">?</button>
+                            <button class="btn btnNoD col-12 p-3 " type="button">?</button>
                           
                     </div>
                 </div>
@@ -153,53 +153,76 @@
               <tr>
                 <th scope="col">Ubicación</th>
                 <th scope="col">Sala</th>
-                <th scope="col">Capacidad Máxima</th>
+                <th scope="col">Capacidad máxima</th>
                 <th scope="col">Aforo permitido</th>
                 <th scope="col">Estado</th>
-                <th scope="col">Hora de inicio</th>
-                <th scope="col">Hora de salida</th>
                 <th scope="col">Reserva</th>
-                <th scope="col">Modificar</th>
                 <th scope="col">Eliminar</th>
+                <th scope="col">Información de la reserva</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <th scope="row">Oficina 5-3</th>
-                <td>Sala 2: Sala General</td>
-                <td>20</td>
-                <td>10</td>
-                <td>Disponible</td>
-                <td>n/a</td>
-                <td>n/a</td>
+                <td>Sala 1: Asesorìa general</td>
+                <td>xx</td>
+                <td>xx</td>
+                <td><span class="badge bg-primary text-black" style="font-size: 15px;">Disponible</span></td>
                 <td>
                     <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample2"
                     aria-controls="offcanvasExample">Reservar</button>
                 </td>
-                <td><button class="btn btn-warning" type="button" disabled>Modificar</button></td>
-                <td><button class="btn btn-danger" type="button" disabled>Eliminar</button></td>
+                <td>
+                  <button class="btn btn-danger" type="button" disabled>Eliminar</button>
+                </td>
+                <td><button class="btn btn-primary" type="button" disabled>Información</button></td>
               </tr>
               <tr>
                 <th scope="row">Oficina 5-1</th>
                 <td>Sala 3</td>
-                <td>8</td>
-                <td>4</td>
-                <td>Reservado</td>
-                <td>8:00 am</td>
-                <td>9:00 am</td>
+                <td>xx</td>
+                <td>xx</td>
+                <td><span class="badge bg-warning text-black" style="font-size: 15px;">Reservado</span></td>
                 <td>
-                    <button class="btn btn-secondary" type="button" disabled>Reservado</button>
+                    <button class="btn btn-primary" type="button" disabled>Reservar</button>
                 </td>
-                <td><button class="btn btn-warning" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample3">Modificar</button></td>
-                <td><button class="btn btn-danger" type="button">Eliminar</button></td>
+                <td>
+                  <button class="btn btn-danger" type="button">Eliminar</button>
+                </td>
+                <!--<td><button class="btn btn-warning" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample3">Modificar</button></td>-->
+                <td><button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#info1">Información</button></td>
               </tr>
             </tbody>
           </table>
     </div>
      
-    </div>
+    </div><br>
+
+    <!--<div class="container-fluid" id="accordionFlushExample">
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingOne">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne" style="font-size: 25px;">
+            Sala 1: Asesoría General &nbsp; <b>(Oficina 5-3)</b> &nbsp; <span class="badge bg-warning">Reservado</span>
+          </button>
+        </h2>
+        <div id="flush-collapseOne" class="accordion-collapse collapse" aria-labelledby="flush-headingOne" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the first item's accordion body.</div>
+        </div>
+      </div>
+      <div class="accordion-item">
+        <h2 class="accordion-header" id="flush-headingTwo">
+          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo" style="font-size: 25px;">
+            Sala 1 &nbsp; <b>(Oficina 5-1)</b> &nbsp; <span class="badge" style="background-color: rgb(255, 108, 54);">Disponible</span>
+          </button>
+        </h2>
+        <div id="flush-collapseTwo" class="accordion-collapse collapse" aria-labelledby="flush-headingTwo" data-bs-parent="#accordionFlushExample">
+          <div class="accordion-body">Placeholder content for this accordion, which is intended to demonstrate the <code>.accordion-flush</code> class. This is the second item's accordion body. Let's imagine this being filled with some actual content.</div>
+        </div>
+      </div>
+    </div>-->
   </p-tabPanel>
 </p-tabView>
+
 
 <!-------------Reseva de cubículos----------->
 <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
@@ -407,6 +430,29 @@
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-----------------ModalInfo-------------------->
+
+<div class="modal fade" id="info1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Información de la sala</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <h4 class="text-center fw-bold">Reserva</h4><br>
+        <h4><b>Reservado para: </b>XXXXXX</h4>
+        <h4><b>Rol: </b>XXXXXXXX</h4>
+        <h4><b>Fecha: </b>XXXXXXX</h4>
+        <h4><b>Hora: </b>XXXXXXX</h4><br>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Aceptar</button>
       </div>
     </div>
   </div>

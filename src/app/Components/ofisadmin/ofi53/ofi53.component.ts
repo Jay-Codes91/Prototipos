@@ -26,7 +26,7 @@ export class Ofi53Component implements OnInit {
     this.options = {
       plugins: [interactionPlugin, listPlugin],
       defaultView: 'listWeek',
-      defaultDate: '2022-04-20',
+      defaultDate: '2022-04-26',
       //locale: esLocale,
       header: {
         left: 'prev,today',
@@ -34,7 +34,7 @@ export class Ofi53Component implements OnInit {
         right: 'listDay,listWeek,next'
       },
       buttonText: {
-        today: 'Hoy',
+        today: 'Reservas de Hoy',
         listDay: 'Día',
         listWeek: 'Semana'
       }
@@ -44,15 +44,15 @@ export class Ofi53Component implements OnInit {
       {
         id: 1,
         title: 'Marco Matarrita - Cubículo #3',
-        start: '2022-04-20T10:30:00',
-        end: '2022-04-20T15:00:00'
+        start: '2022-04-25T10:30:00',
+        end: '2022-04-25T15:00:00'
       }
     ]
 
     this.options2 = {
       plugins: [interactionPlugin, listPlugin],
       defaultView: 'listWeek',
-      defaultDate: '2022-04-20',
+      defaultDate: '2022-04-26',
       //locale: esLocale,
       header: {
         left: 'prev,today',
@@ -60,7 +60,7 @@ export class Ofi53Component implements OnInit {
         right: 'listDay,listWeek,next'
       },
       buttonText: {
-        today: 'Hoy',
+        today: 'Reservas de hoy',
         listDay: 'Día',
         listWeek: 'Semana'
       }
@@ -70,36 +70,138 @@ export class Ofi53Component implements OnInit {
       {
         id: 1,
         title: 'Pedro Hernández - Sala 1: Asesoría Académica',
-        start: '2022-04-20T10:30:00',
-        end: '2022-04-20T11:30:00'
+        start: '2022-04-25T10:30:00',
+        end: '2022-04-25T11:30:00'
       }
     ]
 
   }
+
+  userReser(){
+    Swal.fire({
+      title: '¿Deseas inhabilitar este usuario?',
+      text: "El usuario no podra ingresar al sistema ni realizar ninguna reserva",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: 'rgb(0, 81, 158)',
+      cancelButtonColor: 'rgb(204, 204, 204)',
+      confirmButtonText: 'Aceptar',
+      calcelButtonText: 'Cancelar',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const { value: accept } =  Swal.fire({
+          input: 'textarea',
+          inputLabel: 'Justificación',
+          inputPlaceholder: 'Justificación...',
+          inputAttributes: {
+            'aria-label': 'Type your message here'
+          },
+          showCancelButton: true,
+          confirmButtonColor: 'rgb(0, 81, 158)',
+      cancelButtonColor: 'rgb(204, 204, 204)',
+      confirmButtonText: 'Desactivar',
+      calcelButtonText: 'Cancelar',
+        }).then((result) =>{
+          if (result.isConfirmed){
+            Swal.fire({
+              icon: 'success',
+              title: 'Usuario Desactivado',
+              confirmButtonText: 'Aceptar',
+              confirmButtonColor: 'rgb(0, 81, 158)'
+            })
+          }
+        })
+        
+        
+        
+      }//uu
+    })
+  }
+
+  salaReserv(){
+    Swal.fire({
+      title: '¿Deseas eliminar esta reserva?',
+      text: "El usuario no podrá utilizar esta sala",
+      icon: 'warning',
+      showCancelButton: true,
+      confirmButtonColor: 'rgb(0, 81, 158)',
+      cancelButtonColor: 'rgb(204, 204, 204)',
+      confirmButtonText: 'Aceptar',
+      calcelButtonText: 'Cancelar',
+    }).then((result) => {
+      if (result.isConfirmed) {
+        const { value: accept } =  Swal.fire({
+          input: 'textarea',
+          inputLabel: 'Justificación',
+          inputPlaceholder: 'Justificación...',
+          inputAttributes: {
+            'aria-label': 'Type your message here'
+          },
+          showCancelButton: true,
+          confirmButtonColor: 'rgb(0, 81, 158)',
+      cancelButtonColor: 'rgb(204, 204, 204)',
+      confirmButtonText: 'Desactivar',
+      calcelButtonText: 'Cancelar',
+        }).then((result) =>{
+          if (result.isConfirmed){
+            Swal.fire({
+              icon: 'success',
+              title: 'Reserva eliminada',
+              text: 'Se enviará una notificación por correo al usuario',
+              confirmButtonText: 'Aceptar',
+              confirmButtonColor: 'rgb(0, 81, 158)'
+            })
+          }
+        })
+        
+        
+        
+      }//uu
+    })
+  }
+  
 
   resev(){
     Swal.fire({
       icon: 'info',
       title: '<strong>Cubículo Reservado</strong>',
       html: '<h5><b>Usuario: </b>Carlos Matarrita</h5>'+
-            '<h5><b>Rol: </b>Encargado de cátedra</h5>',
-      footer: '<button class="btn btn-danger" type="button">Eliminar Reserva</button>'
-      
+            '<h5><b>Rol: </b>Encargado de cátedra</h5>' +
+            '<h5><b>Fecha: </b>XXXXXXXX</h5>' +
+            '<h5><b>Hora: </b>XXXXX</h5>',
+      confirmButtonText: 'Aceptar',
+      confirmButtonColor: 'rgb(0, 81, 158)'
     })
   }
 
   nodisp(){
     Swal.fire({
       icon: 'error',
-      title: 'Cubículo no disponible'
+      title: 'Cubículo no disponible',
+      confirmButtonText: 'Aceptar',
+      confirmButtonColor: 'rgb(0, 81, 158)'
     })
   }
 
   disp(){
     Swal.fire({
       icon: 'success',
-      title: 'Cubículo disponible'
+      title: 'Cubículo disponible',
+      confirmButtonText: 'Aceptar',
+      confirmButtonColor: 'rgb(0, 81, 158)'
     })
   }
+
+  admin(){
+    Swal.fire({
+      icon: 'info',
+      title: 'Administrador',
+      html: '<h5><b>Usuario: </b>Marta Bolaños</h5>',
+      confirmButtonText: 'Aceptar',
+      confirmButtonColor: 'rgb(0, 81, 158)'
+    })
+  }
+
+  
 
 }
