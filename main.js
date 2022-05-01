@@ -246,11 +246,14 @@ class Ofi53Component {
     }
     disp() {
         Swal.fire({
-            icon: 'success',
+            icon: 'question',
             title: 'Cubículo disponible',
+            text: '¿Desea inhabilitar este cubículo?',
             confirmButtonText: 'Si',
+            showCancelButton: true,
             confirmButtonColor: 'rgb(0, 81, 158)',
-            cancelButtonText: 'No'
+            cancelButtonText: 'No',
+            cancelButtonColor: 'rgb(255, 108, 54)'
         });
     }
     admin() {
@@ -1210,7 +1213,7 @@ class AdminComponent {
     }
 }
 AdminComponent.ɵfac = function AdminComponent_Factory(t) { return new (t || AdminComponent)(); };
-AdminComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AdminComponent, selectors: [["app-admin"]], decls: 141, vars: 0, consts: [[1, "container-fluid", "p-2", "d-flex", "justify-content-between", 2, "background-color", "rgb(255, 200, 67)"], [1, "align-self-center"], ["title", "Administradora: Hilda", 1, "dropdown", "me-2"], ["href", "#", "role", "button", "id", "dropdownMenuLink", "data-bs-toggle", "dropdown", "aria-expanded", "false", 1, "btn", "btn-light", "dropdown-toggle"], [1, "fa-solid", "fa-circle-user", 2, "font-size", "40px"], ["aria-labelledby", "dropdownMenuLink", 1, "dropdown-menu"], ["data-bs-toggle", "offcanvas", "data-bs-target", "#Ayuda", 1, "dropdown-item", 2, "cursor", "pointer"], ["href", "#", 1, "dropdown-item"], [1, "dropdown-divider"], [1, "text-center", "bol"], ["tabindex", "-1", "id", "Ayuda", "aria-labelledby", "offcanvasExampleLabel", 1, "offcanvas", "offcanvas-top", 2, "height", "100vh"], [1, "offcanvas-header", "border-bottom"], ["id", "offcanvasExampleLabel", 1, "offcanvas-title", "fw-bold"], ["type", "button", "data-bs-dismiss", "offcanvas", "aria-label", "Close", 1, "btn-close", "text-reset"], [1, "offcanvas-body"], [1, "text-center"], ["header", "Reservas de cub\u00EDculos y salas de reuni\u00F3n"], [1, "text-center", "fw-bold"], [1, "container-fluid", "text-center"], ["type", "button", "data-bs-toggle", "modal", "data-bs-target", "#admin", 1, "btn", "btn-primary"], ["header", "Mantenimiento de usuarios y salas"], ["type", "button", "data-bs-toggle", "modal", "data-bs-target", "#mant", 1, "btn", "btn-primary"], [1, "container-fluid", "m-0", "p-0"], ["header", "Usuarios"], ["header", "Salas"], ["id", "admin", "tabindex", "-1", "aria-labelledby", "exampleModalLabel", "aria-hidden", "true", 1, "modal", "fade"], [1, "modal-dialog"], [1, "modal-content"], [1, "modal-header"], ["id", "exampleModalLabel", 1, "modal-title"], ["type", "button", "data-bs-dismiss", "modal", "aria-label", "Close", 1, "btn-close"], [1, "modal-body"], [1, "fw-bold"], [1, "modal-footer"], ["type", "button", "data-bs-dismiss", "modal", 1, "btn", "btn-secondary"], ["id", "mant", "tabindex", "-1", "aria-labelledby", "exampleModalLabel", "aria-hidden", "true", 1, "modal", "fade"]], template: function AdminComponent_Template(rf, ctx) { if (rf & 1) {
+AdminComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineComponent"]({ type: AdminComponent, selectors: [["app-admin"]], decls: 127, vars: 0, consts: [[1, "container-fluid", "p-2", "d-flex", "justify-content-between", 2, "background-color", "rgb(255, 200, 67)"], [1, "align-self-center"], ["title", "Administradora: Hilda", 1, "dropdown", "me-2"], ["href", "#", "role", "button", "id", "dropdownMenuLink", "data-bs-toggle", "dropdown", "aria-expanded", "false", 1, "btn", "btn-light", "dropdown-toggle"], [1, "fa-solid", "fa-circle-user", 2, "font-size", "40px"], ["aria-labelledby", "dropdownMenuLink", 1, "dropdown-menu"], ["data-bs-toggle", "offcanvas", "data-bs-target", "#Ayuda", 1, "dropdown-item", 2, "cursor", "pointer"], ["href", "#", 1, "dropdown-item"], [1, "dropdown-divider"], [1, "text-center", "bol"], ["tabindex", "-1", "id", "Ayuda", "aria-labelledby", "offcanvasExampleLabel", 1, "offcanvas", "offcanvas-top", 2, "height", "100vh"], [1, "offcanvas-header", "border-bottom"], ["id", "offcanvasExampleLabel", 1, "offcanvas-title", "fw-bold"], ["type", "button", "data-bs-dismiss", "offcanvas", "aria-label", "Close", 1, "btn-close", "text-reset"], [1, "offcanvas-body"], [1, "text-center"], ["header", "Reservas de cub\u00EDculos y salas de reuni\u00F3n"], [1, "text-center", "fw-bold"], [1, "container-fluid", "text-center"], ["type", "button", "data-bs-toggle", "modal", "data-bs-target", "#admin", 1, "btn", "btn-primary"], ["header", "Mantenimiento de usuarios y salas"], ["type", "button", "data-bs-toggle", "modal", "data-bs-target", "#mant", 1, "btn", "btn-primary"], [1, "container-fluid", "m-0", "p-0"], ["header", "Usuarios"], ["header", "Salas"], ["id", "admin", "tabindex", "-1", "aria-labelledby", "exampleModalLabel", "aria-hidden", "true", 1, "modal", "fade"], [1, "modal-dialog"], [1, "modal-content"], [1, "modal-header"], ["id", "exampleModalLabel", 1, "modal-title"], ["type", "button", "data-bs-dismiss", "modal", "aria-label", "Close", 1, "btn-close"], [1, "modal-body"], [1, "fw-bold"], [1, "modal-footer"], ["type", "button", "data-bs-dismiss", "modal", 1, "btn", "btn-secondary"], ["id", "mant", "tabindex", "-1", "aria-labelledby", "exampleModalLabel", "aria-hidden", "true", 1, "modal", "fade"]], template: function AdminComponent_Template(rf, ctx) { if (rf & 1) {
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](0, "app-header");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](1, "div", 0);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](2, "h3", 1);
@@ -1314,111 +1317,91 @@ AdminComponent.ɵcmp = _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵdefineCom
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](67, "br");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](68, "h5");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](69, " En la ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](69, " Se incluye un mapa de la ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](70, "b");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](71, "parte izquierda");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](71, "oficina 5-3");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](72, ", se incluye un mapa de la ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](73, "b");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](74, "oficina 5-3");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](72, " con la ubicaci\u00F3n de cada cub\u00EDculo y su n\u00FAmero correspondiente. Cada cub\u00EDculo es un bot\u00F3n y pueden presentar 3 estados y 3 colores. ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](75, " con la ubicaci\u00F3n de cada cub\u00EDculo y su n\u00FAmero correspondiente. Cada cub\u00EDculo es un bot\u00F3n y pueden presentar 3 estados y 3 colores. ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](73, "h5");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](74, "La administradora puede presionar los botones para conocer su estado ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](76, "h5");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](77, "La administradora puede presionar los botones para conocer su estado ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](75, "h5");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](76, "Los botones ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](77, "b");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](78, "3, 11 y 7");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](78, "h5");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](79, "Los botones ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](80, "b");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](81, "3, 11 y 7");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](79, " est\u00E1n habilitados como un ejemplo de como funciona");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](82, " est\u00E1n habilitados como un ejemplo de como funciona");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](80, "h5");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](81, "La administradora puede habilitar o inhabilitar cub\u00EDculos seg\u00FAn su estado");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](83, "h5");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](84, "En la ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](85, "b");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](86, "parte derecha");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](82, "h5");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](83, "Los cub\u00EDculos que estan ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](84, "b");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](85, "Reservados");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](87, " la administradora puede habilitar o inhabilitar cub\u00EDculos seg\u00FAn su estado");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](86, " no se pueden inhabilitar hasta que se desocupen");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](88, "h5");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](89, "En la parte de habilitar cub\u00EDculos en el select se incluye solo los cub\u00EDculos con estado ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](90, "b");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](91, "No disponible");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](87, "h5");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](88, "En la parte de ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](89, "b");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](90, "cub\u00EDculos y salas de reuni\u00F3n reservadas");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](91, " se incluye un bot\u00F3n que muestra todas las reservas de cub\u00EDculos y de salas. ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](92, "h5");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](93, "En la parte de inhabilitar, en el select se incluye solo los cub\u00EDculos con el estado de ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](93, "Los botones con el signo ");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](94, "b");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](95, "Disponible");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](95, "?");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](96, " son los que falta de enumerar");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](96, "h5");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](97, "Los cub\u00EDculos que estan ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](98, "b");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](99, "Reservados");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](100, " no se pueden inhabilitar hasta que se desocupen");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](101, "h5");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](102, "En la parte de ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](103, "b");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](104, "cub\u00EDculos y salas de reuni\u00F3n reservadas");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](105, " se incluye un bot\u00F3n que muesttra todas las reservas de cub\u00EDculos y de salas. ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](106, "h5");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](107, "Los botones con el signo ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](108, "b");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](109, "?");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](110, " son los que falta de enumerar");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](111, "div", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](112, "button", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](113, "Cerrar");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](97, "div", 33);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](98, "button", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](99, "Cerrar");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](114, "div", 35);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](115, "div", 26);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](116, "div", 27);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](117, "div", 28);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](118, "h5", 29);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](119, "Mantenimieno de usuarios y salas");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](100, "div", 35);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](101, "div", 26);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](102, "div", 27);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](103, "div", 28);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](104, "h5", 29);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](105, "Mantenimieno de usuarios y salas");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](120, "button", 30);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](106, "button", 30);
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](121, "div", 31);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](122, "h1");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](123, "Usuarios");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](107, "div", 31);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](108, "h1");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](109, "Usuarios");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](124, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](125, "h3");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](126, "La administradora puede visualizar en pantalla la lista de usuarios, agregar, modificar o desactivarlos.");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](110, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](111, "h3");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](112, "La administradora puede visualizar en pantalla la lista de usuarios, agregar, modificar o desactivarlos.");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](127, "h3");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](128, "Se incluye un buscador, donde la administradora busca por el ");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](129, "b");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](130, "nombre");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](113, "h3");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](114, "Se incluye un buscador, donde la administradora busca por el ");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](115, "b");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](116, "nombre");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](131, " a los usuarios");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](117, " a los usuarios");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](132, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](133, "h1");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](134, "Salas");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](118, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](119, "h1");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](120, "Salas");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](135, "br");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](136, "h3");
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](137, "La administradora puede visualizar en pantalla la lista de salas, agregar, modificar o desactivarlas");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelement"](121, "br");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](122, "h3");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](123, "La administradora puede visualizar en pantalla la lista de salas, agregar, modificar o desactivarlas");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](138, "div", 33);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](139, "button", 34);
-        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](140, "Cerrar");
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](124, "div", 33);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementStart"](125, "button", 34);
+        _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵtext"](126, "Cerrar");
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
         _angular_core__WEBPACK_IMPORTED_MODULE_0__["ɵɵelementEnd"]();
