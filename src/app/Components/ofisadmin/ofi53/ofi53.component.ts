@@ -211,11 +211,14 @@ export class Ofi53Component implements OnInit {
 
   disp(){
     Swal.fire({
-      icon: 'success',
+      icon: 'question',
       title: 'Cubículo disponible',
+      text: '¿Desea inhabilitar este cubículo?',
       confirmButtonText: 'Si',
+      showCancelButton: true,
       confirmButtonColor: 'rgb(0, 81, 158)',
-      cancelButtonText: 'No'
+      cancelButtonText: 'No',
+      cancelButtonColor: 'rgb(255, 108, 54)'
     })
   }
 
