@@ -4,6 +4,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations'
 import {FormsModule} from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
 
+import { UsuariosService } from './Services/usuarios.service';
+
 import {InputTextModule} from 'primeng-lts/inputtext';
 import {TabViewModule} from 'primeng-lts/tabview';
 import {CalendarModule} from 'primeng-lts/calendar';
@@ -24,6 +26,7 @@ import { PluginsComponent } from './Components/plugins/plugins.component';
 import { Page404Component } from './Components/page404/page404.component';
 import { HeaderComponent } from './Components/header/header.component';
 import { FooterComponent } from './Components/footer/footer.component';
+import { BuscadorPipe } from './Pipes/buscador.pipe';
 
 
 const routes: Routes = [
@@ -51,6 +54,7 @@ const routes: Routes = [
     Page404Component,
     HeaderComponent,
     FooterComponent,
+    BuscadorPipe,
     
   ],
   imports: [
@@ -66,7 +70,7 @@ const routes: Routes = [
     FullCalendarModule,
     RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [UsuariosService],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })

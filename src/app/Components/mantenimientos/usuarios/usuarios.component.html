@@ -50,7 +50,7 @@
         <div class="card-body">
             <div class="buscador">
                 <div class="form-floating">
-                    <input type="text" class="form-control form-control-lg" id="floatingInput" placeholder="carlos">
+                    <input type="text" class="form-control form-control-lg" id="floatingInput" placeholder="carlos" name="buscador" [(ngModel)]="buscador" >
                     <label for="floatingInput">Buscar por nombre</label>
                   </div>
             </div><br><br>
@@ -71,50 +71,20 @@
                       </tr>
                     </thead>
                     <tbody>
-                      <tr>
-                        <th scope="row">1</th>
-                        <td>Carlos</td>
-                        <td>Matarrita</td>
-                        <td>Campos</td>
-                        <td>Encargado de XXXXXX</td>
-                        <td>carlos.matarrita@empresa</td>
-                        <td>Activo</td>
+                      <tr *ngFor="let usuario of usuarios | buscador: buscador; index as i">
+                        <th scope="row">{{usuario.id}}</th>
+                        <td>{{usuario.nombre}}</td>
+                        <td>{{usuario.apellido1}}</td>
+                        <td>{{usuario.apellido2}}</td>
+                        <td>{{usuario.rol}}</td>
+                        <td>{{usuario.correo}}</td>
+                        <td>{{usuario.estado}}</td>
                         <td class="text-center">
-                            <button class="btn btn-warning" type="button" data-bs-toggle="offcanvas" data-bs-target="#modUser">Modificar</button>
+                          <button class="btn btn-warning" type="button" data-bs-toggle="offcanvas"
+                            data-bs-target="#modUser">Modificar</button>
                         </td>
                         <td class="text-center">
-                            <button class="btn btn-danger" type="button" (click)="desUser()" >Desactivar</button>
-                        </td>
-                      </tr>
-                      <tr>
-                        <th scope="row">2</th>
-                        <td>Lucía</td>
-                        <td>Mora</td>
-                        <td>Castro</td>
-                        <td>Asistente de XXXXXXX</td>
-                        <td>lucia.mora@empresa.com</td>
-                        <td>Activo</td>
-                        <td class="text-center">
-                            <button class="btn btn-warning" type="button">Modificar</button>
-                        </td>
-                        <td class="text-center">
-                            <button class="btn btn-danger" type="button" (click)="desUser()" >Desactivar</button>
-                        </td>
-                      </tr>
-
-                      <tr>
-                        <th scope="row">3</th>
-                        <td>Yadira</td>
-                        <td>Gónzales</td>
-                        <td>Hernández</td>
-                        <td>Asistente de XXXXXXX</td>
-                        <td>yadira.hernandez@empresa.com</td>
-                        <td>Inactivo</td>
-                        <td class="text-center">
-                            <button class="btn btn-warning" type="button" disabled>Modificar</button>
-                        </td>
-                        <td class="text-center">
-                            <button class="btn btn-danger" type="button" (click)="actUser()" >Activar</button>
+                          <button class="btn btn-danger" type="button" (click)="desUser()">Desactivar</button>
                         </td>
                       </tr>
                     </tbody>

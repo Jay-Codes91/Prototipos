@@ -176,7 +176,10 @@ export class Ofi53Component implements OnInit {
             '<h5><b>Fecha: </b>2022-04-26</h5>' +
             '<h5><b>Hora: </b>8:00am - 3:00pm</h5>',
       confirmButtonText: 'Aceptar',
-      confirmButtonColor: 'rgb(0, 81, 158)'
+      confirmButtonColor: 'rgb(0, 81, 158)',
+      showDenyButton: true,
+      denyButtonText: 'Eliminar Reserva',
+      denyButtonColor: 'rgb(255, 108, 54)'
     })
   }
 
@@ -195,10 +198,14 @@ export class Ofi53Component implements OnInit {
   }
   nodisp(){
     Swal.fire({
-      icon: 'error',
+      icon: 'question',
       title: 'Cubículo no disponible',
-      confirmButtonText: 'Aceptar',
-      confirmButtonColor: 'rgb(0, 81, 158)'
+      text: '¿Desea habilitar este cubículo?',
+      showCancelButton: true,
+      confirmButtonText: 'Si',
+      confirmButtonColor: 'rgb(0, 81, 158)',
+      cancelButtonText: 'No',
+      cancelButtonColor: 'rgb(255, 108, 54)'
     })
   }
 
@@ -206,8 +213,9 @@ export class Ofi53Component implements OnInit {
     Swal.fire({
       icon: 'success',
       title: 'Cubículo disponible',
-      confirmButtonText: 'Aceptar',
-      confirmButtonColor: 'rgb(0, 81, 158)'
+      confirmButtonText: 'Si',
+      confirmButtonColor: 'rgb(0, 81, 158)',
+      cancelButtonText: 'No'
     })
   }
 
@@ -218,6 +226,7 @@ export class Ofi53Component implements OnInit {
       html: '<h5><b>Usuario: </b>Marta Bolaños</h5>',
       confirmButtonText: 'Aceptar',
       confirmButtonColor: 'rgb(0, 81, 158)'
+      
     })
   }
 

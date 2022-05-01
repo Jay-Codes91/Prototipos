@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { UsuariosService } from 'src/app/Services/usuarios.service';
 declare var Swal: any;
 @Component({
   selector: 'app-usuarios',
@@ -7,7 +8,12 @@ declare var Swal: any;
 })
 export class UsuariosComponent implements OnInit {
 
-  constructor() { }
+  buscador = '';
+  usuarios: any[] = [];
+
+  constructor(private ser: UsuariosService) {
+     this.usuarios = this.ser.getUsuarios();
+   }
 
   ngOnInit(): void {
   }
